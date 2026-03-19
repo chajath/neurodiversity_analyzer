@@ -1,0 +1,79 @@
+- rsid1: rs4680
+  rsid2: rs1800955
+  gene1: COMT
+  gene2: DRD4
+  interaction_or: 1.35
+  description: 'COMT Met + DRD4 -521T: synergistic effect on prefrontal dopamine tone. Met/Met + T/T = markedly elevated tonic
+    dopamine.'
+  source: PMID:18414213
+- rsid1: rs4680
+  rsid2: rs1800497
+  gene1: COMT
+  gene2: ANKK1/DRD2
+  interaction_or: 1.25
+  description: 'COMT Met + DRD2 Taq1A: combined effect on striatal-prefrontal dopamine balance. Both affect dopamine availability
+    via different mechanisms.'
+  source: PMID:20732625
+- rsid1: rs25531
+  rsid2: rs53576
+  gene1: SLC6A4
+  gene2: OXTR
+  interaction_or: 1.3
+  description: '5-HTTLPR low-expression + OXTR G: combined heightened social-emotional sensitivity. Both modulate amygdala
+    reactivity to social cues.'
+  source: PMID:21928163
+- rsid1: rs3780413
+  rsid2: rs301430
+  gene1: GRIN2B
+  gene2: SLC1A1
+  interaction_or: 1.28
+  description: 'GRIN2B + SLC1A1: convergent glutamate signaling dysregulation in cortico-striato-thalamic circuits; both implicated
+    in OCD.'
+  source: PMID:22005930
+- rsid1: rs6311
+  rsid2: rs4565946
+  gene1: HTR2A
+  gene2: TPH2
+  interaction_or: 1.22
+  description: 'HTR2A receptor + TPH2 synthesis: convergent serotonergic signaling. Receptor sensitivity × synthesis rate
+    interaction.'
+  source: PMID:22180660
+- rsid1: rs1800955
+  rsid2: rs1611115
+  gene1: DRD4
+  gene2: DBH
+  interaction_or: 1.3
+  description: 'DRD4 promoter + DBH promoter: synergistic effect on catecholamine-driven arousal, novelty seeking, and psychomotor
+    activation.'
+  source: PMID:16998993
+- rsid1: rs6265
+  rsid2: rs4680
+  gene1: BDNF
+  gene2: COMT
+  interaction_or: 1.2
+  description: 'BDNF Met + COMT Met: combined effect on prefrontal plasticity and stress reactivity. Both modulate prefrontal
+    cortex function.'
+  source: PMID:24002750
+- rsid1: rs1006737
+  rsid2: rs10994397
+  gene1: CACNA1C
+  gene2: ANK3
+  interaction_or: 1.25
+  description: 'CACNA1C + ANK3: convergent calcium signaling at axon initial segment. Both are top bipolar GWAS hits and affect
+    neuronal excitability.'
+  source: PMID:31043756
+- rsid1: rs6904071
+  rsid2: rs6994992
+  gene1: C4A/C4B
+  gene2: NRG1
+  interaction_or: 1.22
+  description: 'C4 complement + NRG1-ErbB4: convergent synapse elimination pathway. C4 tags synapses, NRG1 modulates which
+    survive.'
+  source: PMID:27991903
+- rsid1: rs4307059
+  rsid2: rs1800955
+  gene1: CDH9/CDH10
+  gene2: DRD4
+  interaction_or: 1.18
+  description: 'CDH cell adhesion + DRD4 dopamine: neurodevelopmental + dopaminergic convergence spanning ASD and ADHD pathways.'
+  source: PMID:19404256

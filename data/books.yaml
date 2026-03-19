@@ -1,0 +1,518 @@
+Living with Intensity:
+  author: Daniels & Piechowski, 2009
+  description: "Dabrowski's Theory of Positive Disintegration. The five\n    overexcitabilities as features of gifted development."
+  components:
+  - panel: psychomotor
+    weight: 1.0
+    dimension: Psychomotor OE
+  - panel: sps
+    weight: 1.0
+    dimension: Sensual + Emotional OE
+  - panel: gifted
+    weight: 1.0
+    dimension: Intellectual OE
+  - panel: ocd
+    weight: 0.3
+    dimension: Imaginational OE (depth)
+  - panel: asd
+    weight: 0.3
+    dimension: Intensity / pattern-recognition
+  - panel: adhd
+    weight: 0.2
+    dimension: Psychomotor restlessness
+  cross_rg:
+    psychomotor,adhd: 0.6
+    sps,asd: 0.3
+    gifted,adhd: 0.2
+    ocd,asd: 0.15
+    asd,adhd: 0.35
+Your Rainforest Mind:
+  author: Paula Prober, 2016
+  description: "The 'rainforest mind': high ability + deep sensitivity +\n    intensity + curiosity + feeling 'too much' of\
+    \ everything."
+  components:
+  - panel: gifted
+    weight: 1.0
+    dimension: Cognitive ability / multipotentiality
+  - panel: sps
+    weight: 1.0
+    dimension: Deep sensitivity / empathic overwhelm
+  - panel: psychomotor
+    weight: 0.6
+    dimension: Restless energy / driven intensity
+  - panel: asd
+    weight: 0.4
+    dimension: Deep focus / pattern thinking
+  - panel: ocd
+    weight: 0.3
+    dimension: Perfectionism / depth of processing
+  - panel: adhd
+    weight: 0.3
+    dimension: Curiosity / divergent thinking
+  - panel: bipolar
+    weight: 0.15
+    dimension: Emotional range / creative intensity
+  cross_rg:
+    gifted,adhd: 0.2
+    sps,asd: 0.3
+    psychomotor,adhd: 0.6
+    asd,adhd: 0.35
+    asd,ocd: 0.15
+    ocd,bipolar: 0.15
+    bipolar,adhd: 0.2
+Divergent Mind:
+  author: Jenara Nerenberg, 2020
+  description: "Neurodivergence in women: ADHD + ASD + HSP as an\n    intersectional experience. Sensory differences as strengths."
+  components:
+  - panel: sps
+    weight: 1.0
+    dimension: Sensory processing sensitivity
+  - panel: adhd
+    weight: 1.0
+    dimension: Attention differences
+  - panel: asd
+    weight: 0.8
+    dimension: Autism-spectrum traits
+  - panel: psychomotor
+    weight: 0.4
+    dimension: Restless intensity
+  - panel: ocd
+    weight: 0.2
+    dimension: Repetitive depth
+  cross_rg:
+    sps,asd: 0.3
+    adhd,asd: 0.35
+    psychomotor,adhd: 0.6
+    ocd,asd: 0.15
+Misdiagnosis and Dual Diagnoses of Gifted Children and Adults:
+  author: Webb, Amend, et al., 2005/2016
+  description: "How giftedness mimics ADHD, ASD, OCD, bipolar, and\n    mood disorders. Intensity misread as pathology."
+  components:
+  - panel: gifted
+    weight: 1.0
+    dimension: High ability (the core)
+  - panel: adhd
+    weight: 0.8
+    dimension: ADHD-like intensity
+  - panel: asd
+    weight: 0.6
+    dimension: ASD-like deep focus
+  - panel: ocd
+    weight: 0.5
+    dimension: OCD-like perfectionism
+  - panel: bipolar
+    weight: 0.4
+    dimension: Bipolar-like mood range
+  - panel: psychomotor
+    weight: 0.7
+    dimension: Psychomotor intensity
+  - panel: sps
+    weight: 0.5
+    dimension: Sensory sensitivity
+  cross_rg:
+    gifted,adhd: 0.2
+    adhd,asd: 0.35
+    ocd,asd: 0.15
+    bipolar,adhd: 0.2
+    psychomotor,adhd: 0.6
+    sps,asd: 0.3
+'Quiet: The Power of Introverts':
+  author: Susan Cain, 2012
+  description: "Introversion and high sensitivity as strengths.\n    Deep processing, overstimulation, need for solitude."
+  components:
+  - panel: sps
+    weight: 1.0
+    dimension: Sensory sensitivity / depth of processing
+  - panel: gifted
+    weight: 0.5
+    dimension: Reflective intellectual depth
+  - panel: asd
+    weight: 0.3
+    dimension: Preference for solitude / routines
+  cross_rg:
+    sps,asd: 0.3
+    gifted,asd: 0.1
+Driven to Distraction:
+  author: Hallowell & Ratey, 1994/2011
+  description: "The definitive ADHD guide. Recognizing scattered\n    brilliance, hyperfocus, and restless creativity."
+  components:
+  - panel: adhd
+    weight: 1.0
+    dimension: ADHD core traits
+  - panel: psychomotor
+    weight: 0.8
+    dimension: Psychomotor drive
+  - panel: gifted
+    weight: 0.3
+    dimension: Hyperfocus / creative bursts
+  cross_rg:
+    adhd,psychomotor: 0.6
+    gifted,adhd: 0.2
+Wired to Create:
+  author: Kaufman & Gregoire, 2015
+  description: "The neuroscience of creative minds. Openness,\n    daydreaming, sensitivity, and nonconformity."
+  components:
+  - panel: gifted
+    weight: 1.0
+    dimension: Intellectual ability / openness
+  - panel: sps
+    weight: 0.8
+    dimension: Sensitivity / depth of feeling
+  - panel: psychomotor
+    weight: 0.6
+    dimension: Energetic drive
+  - panel: adhd
+    weight: 0.4
+    dimension: Mind-wandering / divergent thought
+  - panel: bipolar
+    weight: 0.3
+    dimension: Emotional amplitude
+  cross_rg:
+    gifted,adhd: 0.2
+    sps,bipolar: 0.1
+    psychomotor,adhd: 0.6
+    bipolar,adhd: 0.2
+NeuroTribes:
+  author: Steve Silberman, 2015
+  description: "The history and culture of autism and neurodiversity.\n    Pattern-thinking, systems minds, and the tech connection."
+  components:
+  - panel: asd
+    weight: 1.0
+    dimension: Autism-spectrum pattern thinking
+  - panel: gifted
+    weight: 0.7
+    dimension: Systemizing intelligence
+  - panel: ocd
+    weight: 0.3
+    dimension: Detail orientation / routines
+  - panel: adhd
+    weight: 0.2
+    dimension: Hyperfocus episodes
+  cross_rg:
+    asd,adhd: 0.35
+    ocd,asd: 0.15
+    gifted,asd: 0.1
+The Gifted Adult:
+  author: Mary-Elaine Jacobsen, 1999
+  description: "Giftedness in adulthood: intensity, complexity,\n    and drive. 'Evolutionary intelligence' framework."
+  components:
+  - panel: gifted
+    weight: 1.0
+    dimension: Core cognitive ability
+  - panel: psychomotor
+    weight: 0.7
+    dimension: Drive / intensity / energy
+  - panel: sps
+    weight: 0.6
+    dimension: Perceptiveness / sensitivity
+  - panel: ocd
+    weight: 0.3
+    dimension: Perfectionism / high standards
+  cross_rg:
+    psychomotor,gifted: 0.1
+    sps,gifted: 0.1
+The Power of Different:
+  author: Gail Saltz, 2017
+  description: "How brain differences (ADHD, ASD, dyslexia, anxiety,\n    bipolar) fuel unique strengths and creativity."
+  components:
+  - panel: adhd
+    weight: 0.8
+    dimension: ADHD creativity
+  - panel: asd
+    weight: 0.8
+    dimension: ASD systemizing
+  - panel: dyslexia
+    weight: 0.8
+    dimension: Dyslexic spatial thinking
+  - panel: bipolar
+    weight: 0.6
+    dimension: Bipolar creative drive
+  - panel: ocd
+    weight: 0.4
+    dimension: OCD precision
+  - panel: gifted
+    weight: 0.4
+    dimension: General ability
+  cross_rg:
+    adhd,asd: 0.35
+    bipolar,adhd: 0.2
+    ocd,asd: 0.15
+    dyslexia,adhd: 0.15
+
+Unmasking Autism:
+  author: Devon Price, 2022
+  description: Late-diagnosed autism. Camouflaging, masking, and self-discovery.
+  components:
+  - {panel: asd, weight: 1.0, dimension: Autism core}
+  - {panel: sps, weight: 0.6, dimension: Sensory overwhelm}
+  - {panel: ocd, weight: 0.3, dimension: Rigid patterns}
+  - {panel: gifted, weight: 0.3, dimension: Analytical self-awareness}
+  cross_rg:
+    asd,sps: 0.30
+    ocd,asd: 0.15
+
+Scattered Minds:
+  author: Gabor Mate, 1999
+  description: ADHD as developmental adaptation. Attachment, sensitivity, environment.
+  components:
+  - {panel: adhd, weight: 1.0, dimension: ADHD traits}
+  - {panel: sps, weight: 0.7, dimension: Emotional sensitivity}
+  - {panel: psychomotor, weight: 0.5, dimension: Restless activation}
+  cross_rg:
+    adhd,psychomotor: 0.60
+    sps,adhd: 0.15
+
+ADHD 2.0:
+  author: Hallowell & Ratey, 2021
+  description: Updated ADHD science. VAST (Variable Attention Stimulus Trait).
+  components:
+  - {panel: adhd, weight: 1.0, dimension: ADHD core}
+  - {panel: psychomotor, weight: 0.7, dimension: Intensity / energy}
+  - {panel: gifted, weight: 0.4, dimension: Strengths-based framing}
+  - {panel: sps, weight: 0.3, dimension: Rejection sensitivity}
+  cross_rg:
+    adhd,psychomotor: 0.60
+    gifted,adhd: 0.20
+
+Uniquely Human:
+  author: Barry Prizant, 2015
+  description: Autism reframed - behavior as communication, not deficit.
+  components:
+  - {panel: asd, weight: 1.0, dimension: Autism understanding}
+  - {panel: sps, weight: 0.5, dimension: Sensory experience}
+  - {panel: ocd, weight: 0.2, dimension: Need for predictability}
+  cross_rg:
+    asd,sps: 0.30
+    ocd,asd: 0.15
+
+Touched with Fire:
+  author: Kay Redfield Jamison, 1993
+  description: Manic-depressive illness and the artistic temperament.
+  components:
+  - {panel: bipolar, weight: 1.0, dimension: Mood range}
+  - {panel: gifted, weight: 0.8, dimension: Creative brilliance}
+  - {panel: psychomotor, weight: 0.5, dimension: Manic energy}
+  - {panel: sps, weight: 0.4, dimension: Emotional depth}
+  cross_rg:
+    bipolar,psychomotor: 0.15
+    gifted,bipolar: 0.10
+    sps,bipolar: 0.10
+
+The Highly Sensitive Person:
+  author: Elaine Aron, 1996
+  description: The original HSP book. Sensory processing sensitivity as temperament.
+  components:
+  - {panel: sps, weight: 1.0, dimension: Core HSP trait}
+  - {panel: gifted, weight: 0.3, dimension: Depth of processing}
+  - {panel: asd, weight: 0.2, dimension: Sensory overlap}
+  cross_rg:
+    sps,asd: 0.30
+
+A Radical Guide for Women with ADHD:
+  author: Sari Solden & Michelle Frank, 2019
+  description: ADHD in women - shame, internalization, and reclaiming identity.
+  components:
+  - {panel: adhd, weight: 1.0, dimension: ADHD core}
+  - {panel: sps, weight: 0.6, dimension: Emotional sensitivity}
+  - {panel: psychomotor, weight: 0.4, dimension: Internal restlessness}
+  - {panel: ocd, weight: 0.2, dimension: Compensatory perfectionism}
+  cross_rg:
+    adhd,psychomotor: 0.60
+    sps,adhd: 0.15
+
+The Power of Neurodiversity:
+  author: Thomas Armstrong, 2010
+  description: Strengths of differently wired brains across conditions.
+  components:
+  - {panel: adhd, weight: 0.7, dimension: ADHD strengths}
+  - {panel: asd, weight: 0.7, dimension: ASD strengths}
+  - {panel: dyslexia, weight: 0.7, dimension: Dyslexia strengths}
+  - {panel: bipolar, weight: 0.5, dimension: Mood strengths}
+  - {panel: gifted, weight: 0.4, dimension: Cognitive ability}
+  cross_rg:
+    adhd,asd: 0.35
+    bipolar,adhd: 0.20
+    dyslexia,adhd: 0.15
+
+Smart but Stuck:
+  author: Thomas E. Brown, 2014
+  description: When high IQ meets executive function challenges. Gifted + ADHD.
+  components:
+  - {panel: gifted, weight: 1.0, dimension: High cognitive ability}
+  - {panel: adhd, weight: 1.0, dimension: Executive function challenges}
+  - {panel: psychomotor, weight: 0.4, dimension: Restless energy}
+  cross_rg:
+    gifted,adhd: 0.20
+    adhd,psychomotor: 0.60
+
+Proust and the Squid:
+  author: Maryanne Wolf, 2007
+  description: The reading brain and dyslexia. How literacy rewires the brain.
+  components:
+  - {panel: dyslexia, weight: 1.0, dimension: Reading / language processing}
+  - {panel: gifted, weight: 0.5, dimension: Cognitive adaptation}
+  - {panel: asd, weight: 0.2, dimension: Visual-spatial processing}
+  cross_rg:
+    dyslexia,asd: 0.10
+
+An Unquiet Mind:
+  author: Kay Redfield Jamison, 1995
+  description: Memoir of bipolar disorder by a psychiatrist. Brilliance and darkness.
+  components:
+  - {panel: bipolar, weight: 1.0, dimension: Bipolar experience}
+  - {panel: gifted, weight: 0.6, dimension: Intellectual capacity}
+  - {panel: sps, weight: 0.4, dimension: Emotional intensity}
+  - {panel: psychomotor, weight: 0.3, dimension: Manic energy bursts}
+  cross_rg:
+    bipolar,psychomotor: 0.15
+    sps,bipolar: 0.10
+
+Thinking in Pictures:
+  author: Temple Grandin, 1995/2006
+  description: Visual thinking in autism. How different minds solve problems.
+  components:
+  - {panel: asd, weight: 1.0, dimension: Visual-spatial autistic cognition}
+  - {panel: gifted, weight: 0.5, dimension: Problem-solving ability}
+  - {panel: ocd, weight: 0.3, dimension: Detail / pattern focus}
+  cross_rg:
+    ocd,asd: 0.15
+    gifted,asd: 0.10
+
+The Drama of the Gifted Child:
+  author: Alice Miller, 1979/1997
+  description: Emotional sensitivity in gifted children. Empathy, adaptation, true self.
+  components:
+  - {panel: sps, weight: 1.0, dimension: Emotional sensitivity}
+  - {panel: gifted, weight: 0.8, dimension: Gifted perception}
+  - {panel: ocd, weight: 0.2, dimension: Adaptive perfectionism}
+  cross_rg:
+    sps,gifted: 0.10
+
+Differently Wired:
+  author: Deborah Reber, 2018
+  description: Raising an atypical child. ADHD, ASD, giftedness, 2e, intensity.
+  components:
+  - {panel: gifted, weight: 0.8, dimension: Giftedness / 2e}
+  - {panel: adhd, weight: 0.7, dimension: ADHD traits}
+  - {panel: asd, weight: 0.7, dimension: ASD traits}
+  - {panel: sps, weight: 0.5, dimension: Sensitivity}
+  - {panel: psychomotor, weight: 0.4, dimension: Intensity}
+  cross_rg:
+    gifted,adhd: 0.20
+    adhd,asd: 0.35
+    sps,asd: 0.30
+    psychomotor,adhd: 0.60
+
+Twice Exceptional:
+  author: Scott Barry Kaufman (ed.), 2018
+  description: 2e - gifted AND neurodivergent. Strength + challenge.
+  components:
+  - {panel: gifted, weight: 1.0, dimension: Giftedness}
+  - {panel: adhd, weight: 0.7, dimension: ADHD co-occurrence}
+  - {panel: asd, weight: 0.6, dimension: ASD co-occurrence}
+  - {panel: dyslexia, weight: 0.5, dimension: Dyslexia co-occurrence}
+  - {panel: sps, weight: 0.4, dimension: Overexcitability / sensitivity}
+  cross_rg:
+    gifted,adhd: 0.20
+    adhd,asd: 0.35
+    dyslexia,adhd: 0.15
+    sps,asd: 0.30
+
+Look Me in the Eye:
+  author: John Elder Robison, 2007
+  description: Growing up with undiagnosed Asperger's. Finding identity and belonging.
+  components:
+  - {panel: asd, weight: 1.0, dimension: Autism lived experience}
+  - {panel: gifted, weight: 0.4, dimension: Technical brilliance}
+  - {panel: psychomotor, weight: 0.2, dimension: Restless tinkering}
+  cross_rg:
+    gifted,asd: 0.10
+
+The Dyslexic Advantage:
+  author: Brock & Fernette Eide, 2011
+  description: Dyslexia as different wiring, not deficit. MIND strengths framework.
+  components:
+  - {panel: dyslexia, weight: 1.0, dimension: Dyslexia core}
+  - {panel: gifted, weight: 0.6, dimension: Spatial / narrative talent}
+  - {panel: asd, weight: 0.2, dimension: Big-picture thinking}
+  cross_rg:
+    dyslexia,gifted: 0.10
+
+Neurodiversity - The Birth of an Idea:
+  author: Judy Singer, 2017
+  description: Origin of the neurodiversity concept and movement.
+  components:
+  - {panel: asd, weight: 0.8, dimension: Autism spectrum}
+  - {panel: adhd, weight: 0.6, dimension: ADHD}
+  - {panel: dyslexia, weight: 0.6, dimension: Dyslexia}
+  - {panel: gifted, weight: 0.3, dimension: Cognitive variation}
+  cross_rg:
+    asd,adhd: 0.35
+    dyslexia,adhd: 0.15
+
+The Out-of-Sync Child:
+  author: Carol Kranowitz, 1998/2005
+  description: Sensory processing differences in children. Over- and under-responsivity.
+  components:
+  - {panel: sps, weight: 1.0, dimension: Sensory processing}
+  - {panel: asd, weight: 0.4, dimension: Sensory-autism overlap}
+  - {panel: psychomotor, weight: 0.3, dimension: Motor planning}
+  cross_rg:
+    sps,asd: 0.30
+
+Women with Attention Deficit Disorder:
+  author: Sari Solden, 1995/2005
+  description: The classic on ADHD in women. Shame, disorganization, and coping.
+  components:
+  - {panel: adhd, weight: 1.0, dimension: ADHD core}
+  - {panel: sps, weight: 0.5, dimension: Emotional sensitivity}
+  - {panel: ocd, weight: 0.3, dimension: Compensatory strategies}
+  cross_rg:
+    sps,adhd: 0.15
+
+Bright Not Broken:
+  author: Kennedy & Banks, 2011
+  description: Gifted kids with ADHD, ASD, and other conditions. 2e advocacy.
+  components:
+  - {panel: gifted, weight: 1.0, dimension: Giftedness}
+  - {panel: adhd, weight: 0.8, dimension: ADHD}
+  - {panel: asd, weight: 0.6, dimension: ASD}
+  - {panel: tourette, weight: 0.3, dimension: Tourette}
+  - {panel: ocd, weight: 0.3, dimension: OCD}
+  cross_rg:
+    gifted,adhd: 0.20
+    adhd,asd: 0.35
+    ocd,asd: 0.15
+
+The Explosive Child:
+  author: Ross W. Greene, 1998/2014
+  description: Inflexible-explosive children. Lagging skills, not bad behavior.
+  components:
+  - {panel: ocd, weight: 0.8, dimension: Cognitive inflexibility}
+  - {panel: adhd, weight: 0.6, dimension: Executive function}
+  - {panel: asd, weight: 0.5, dimension: Rigidity}
+  - {panel: psychomotor, weight: 0.4, dimension: Intense reactions}
+  cross_rg:
+    ocd,asd: 0.15
+    adhd,asd: 0.35
+    psychomotor,adhd: 0.60
+
+Is It You, Me, or Adult A.D.D.?:
+  author: Gina Pera, 2008
+  description: ADHD in adult relationships. Communication, empathy, and partnership.
+  components:
+  - {panel: adhd, weight: 1.0, dimension: ADHD relationship impact}
+  - {panel: psychomotor, weight: 0.4, dimension: Restless energy}
+  - {panel: sps, weight: 0.3, dimension: Emotional reactivity}
+  cross_rg:
+    adhd,psychomotor: 0.60
+
+Asperger's from the Inside Out:
+  author: Michael John Carley, 2008
+  description: Adult Asperger's identity. Self-advocacy and community.
+  components:
+  - {panel: asd, weight: 1.0, dimension: Autism / Asperger's}
+  - {panel: gifted, weight: 0.3, dimension: Intellectual focus}
+  - {panel: ocd, weight: 0.2, dimension: Routine needs}
+  cross_rg:
+    ocd,asd: 0.15

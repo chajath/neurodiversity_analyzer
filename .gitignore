@@ -1,0 +1,4 @@
+.vscode/
+autism_snp_analyzer.py
+__pycache__/
+*.pyc
