@@ -3,23 +3,28 @@ asd:
   short_name: ASD
   prevalence: 0.023
   notes:
-  - These SNPs individually have VERY SMALL effect sizes (OR ~1.07-1.27).
-  - ASD heritability is 60-90%, involving hundreds to thousands of variants.
-  - Grove et al. 2019 (PMID:30804558) identified the first 5 GWS loci (N=18,381/27,969).
+  - Common-variant effects are small (OR ~1.05-1.25); ASD heritability is 60-90%, spread across thousands of variants.
+  - Grove et al. 2019 (PMID:30804558; 18,381 cases / 27,969 controls) identified the first 5 GWS loci; Matoba et al. 2020
+    (PMID:32747698; SPARK + iPSYCH-PGC) confirmed 1p21.3, 8p21 and 20p11 and added 8p11.23 (DDHD2).
+  - As of Oct 2026 no larger ASD case-control GWAS has been published; a PGC/iPSYCH freeze with >50,000 cases was presented
+    in 2025, and the 2026 cross-disorder study (Grotzinger, PMID:41372416) still uses Grove 2019.
+  - Classic candidate-gene SNPs (CNTNAP2, OXTR, RELN, EN2, MET, GABRB3, SLC6A4, COMT, BDNF) are not among the GWAS loci; treat
+    them as low-confidence.
   - The most impactful ASD variants are rare CNVs and de novo mutations in CHD8, SCN2A, SHANK3, NRXN1 — NOT detectable from
     23andMe data.
-  - Environmental factors and epigenetics also play significant roles.
   snps:
   - rsid: rs2710102
     gene: CNTNAP2
     chromosome: '7'
-    risk_allele: C
+    risk_allele: G
     odds_ratio: 1.2
     ci_lower: 1.07
     ci_upper: 1.35
     risk_allele_freq: 0.55
     description: Contactin-associated protein-like 2; neural circuit assembly and language development.
     source: PMID:18179900
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Disruption of neurexin 1 associated with autism spectrum dis...)
   - rsid: rs7794745
     gene: CNTNAP2
     chromosome: '7'
@@ -30,6 +35,8 @@ asd:
     risk_allele_freq: 0.35
     description: CNTNAP2 variant associated with ASD risk in multiple studies.
     source: PMID:18179900
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Disruption of neurexin 1 associated with autism spectrum dis...)
   - rsid: rs4307059
     gene: CDH9/CDH10
     chromosome: '5'
@@ -60,6 +67,9 @@ asd:
     risk_allele_freq: 0.47
     description: Engrailed-2 homeobox gene; cerebellar patterning gene implicated in ASD.
     source: PMID:16830336
+    unverified: true
+    unverified_reason: labelled chr7 but rsid is on chr2; cited PMID is a different paper (Quantitative microsatellite analysis
+      to delineate the common...)
   - rsid: rs1861972
     gene: EN2
     chromosome: '7'
@@ -70,6 +80,8 @@ asd:
     risk_allele_freq: 0.43
     description: EN2 intronic variant; associated with ASD in family-based studies.
     source: PMID:16830336
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Quantitative microsatellite analysis to delineate the common...)
   - rsid: rs4141463
     gene: MACROD2
     chromosome: '20'
@@ -80,10 +92,12 @@ asd:
     risk_allele_freq: 0.59
     description: MACROD2; genome-wide significant in large ASD GWAS.
     source: PMID:19557195
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Genome-wide analyses of exonic copy number variants in a fam...)
   - rsid: rs10513025
     gene: SEMA5A
     chromosome: '5'
-    risk_allele: G
+    risk_allele: C
     odds_ratio: 1.14
     ci_lower: 1.06
     ci_upper: 1.23
@@ -100,6 +114,9 @@ asd:
     risk_allele_freq: 0.38
     description: Potassium channel gene; ion channel signaling in neurodevelopment.
     source: PMID:28440220
+    unverified: true
+    unverified_reason: labelled chr10 but rsid is on chr5; cited PMID is a different paper (Rapid evolution of the human mutation
+      spectrum....)
   - rsid: rs1718101
     gene: FOXP1
     chromosome: '3'
@@ -110,6 +127,9 @@ asd:
     risk_allele_freq: 0.42
     description: Forkhead box P1; language and neurodevelopmental disorders.
     source: PMID:28440220
+    unverified: true
+    unverified_reason: labelled chr3 but rsid is on chr7; cited PMID is a different paper (Rapid evolution of the human mutation
+      spectrum....)
   - rsid: rs237887
     gene: OXTR
     chromosome: '3'
@@ -120,6 +140,8 @@ asd:
     risk_allele_freq: 0.36
     description: Oxytocin receptor gene; social behavior and bonding.
     source: PMID:20648451
+    unverified: true
+    unverified_reason: cited PMID is a different paper ([Primary percutaneous coronary intervention with DES implant...)
   - rsid: rs2254298
     gene: OXTR
     chromosome: '3'
@@ -130,6 +152,8 @@ asd:
     risk_allele_freq: 0.15
     description: Oxytocin receptor variant; associated with ASD in multiple populations.
     source: PMID:20648451
+    unverified: true
+    unverified_reason: cited PMID is a different paper ([Primary percutaneous coronary intervention with DES implant...)
   - rsid: rs53576
     gene: OXTR
     chromosome: '3'
@@ -140,6 +164,8 @@ asd:
     risk_allele_freq: 0.37
     description: Oxytocin receptor SNP; linked to social cognition and empathy traits.
     source: PMID:20648451
+    unverified: true
+    unverified_reason: cited PMID is a different paper ([Primary percutaneous coronary intervention with DES implant...)
   - rsid: rs1042778
     gene: OXTR
     chromosome: '3'
@@ -150,6 +176,8 @@ asd:
     risk_allele_freq: 0.4
     description: OXTR 3'-UTR variant; prosocial behavior and ASD susceptibility.
     source: PMID:20648451
+    unverified: true
+    unverified_reason: cited PMID is a different paper ([Primary percutaneous coronary intervention with DES implant...)
   - rsid: rs6807362
     gene: RELN
     chromosome: '7'
@@ -160,6 +188,9 @@ asd:
     risk_allele_freq: 0.22
     description: Reelin gene; critical for neuronal migration and cortical layering.
     source: PMID:11258621
+    unverified: true
+    unverified_reason: labelled chr7 but rsid is on chr3; cited PMID is a different paper (Complex host cell responses to
+      antisense suppression of ACHE...)
   - rsid: rs362691
     gene: RELN
     chromosome: '7'
@@ -170,6 +201,8 @@ asd:
     risk_allele_freq: 0.25
     description: Reelin coding variant; reduced reelin expression in ASD brains.
     source: PMID:11258621
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Complex host cell responses to antisense suppression of ACHE...)
   - rsid: rs1805247
     gene: GABRB3
     chromosome: '15'
@@ -180,6 +213,9 @@ asd:
     risk_allele_freq: 0.3
     description: GABA-A receptor beta-3 subunit; 15q11-13 region linked to ASD.
     source: PMID:15290861
+    unverified: true
+    unverified_reason: labelled chr15 but rsid is on chr12; cited PMID is a different paper (Aerosol dispersion of respirable
+      particles in narrow size di...)
   - rsid: rs686
     gene: DRD1
     chromosome: '5'
@@ -190,16 +226,20 @@ asd:
     risk_allele_freq: 0.62
     description: Dopamine receptor D1; dopaminergic signaling in social reward pathways.
     source: PMID:23453888
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Illness perceptions in IBD influence psychological status, s...)
   - rsid: rs6314
     gene: HTR2A
     chromosome: '13'
-    risk_allele: T
+    risk_allele: A
     odds_ratio: 1.14
     ci_lower: 1.03
     ci_upper: 1.26
     risk_allele_freq: 0.09
     description: Serotonin receptor 2A (His452Tyr); serotonin system implicated in ASD.
     source: PMID:15741939
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Slower implicit categorical learning in adult poor readers....)
   - rsid: rs4680
     gene: COMT
     chromosome: '22'
@@ -210,6 +250,8 @@ asd:
     risk_allele_freq: 0.49
     description: Catechol-O-methyltransferase Val158Met; dopamine metabolism, executive function.
     source: PMID:18414213
+    unverified: true
+    unverified_reason: cited PMID is a different paper (ACMG recommendations for standards for interpretation and re...)
   - rsid: rs6265
     gene: BDNF
     chromosome: '11'
@@ -220,6 +262,8 @@ asd:
     risk_allele_freq: 0.2
     description: Brain-derived neurotrophic factor Val66Met; neural plasticity and development.
     source: PMID:24002750
+    unverified: true
+    unverified_reason: cited PMID is a different paper (A family 3 glycosyl hydrolase of Dickeya dadantii 3937 is in...)
   - rsid: rs25531
     gene: SLC6A4 (5-HTTLPR)
     chromosome: '17'
@@ -230,24 +274,26 @@ asd:
     risk_allele_freq: 0.1
     description: Serotonin transporter regulatory variant; modifies 5-HTTLPR effect on ASD risk.
     source: PMID:15741939
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Slower implicit categorical learning in adult poor readers....)
   - rsid: rs910805
     gene: KIZ
     chromosome: '20'
-    risk_allele: A
-    odds_ratio: 1.12
-    ci_lower: 1.08
-    ci_upper: 1.17
-    risk_allele_freq: 0.55
+    risk_allele: G
+    odds_ratio: 1.101
+    ci_lower: 1.067
+    ci_upper: 1.136
+    risk_allele_freq: 0.24
     description: Near KIZ (kizuna centrosomal); 20p14 locus, first GWS ASD hit.
     source: PMID:30804558
   - rsid: rs10099100
     gene: XKR6
     chromosome: '8'
     risk_allele: C
-    odds_ratio: 1.08
-    ci_lower: 1.05
+    odds_ratio: 1.088
+    ci_lower: 1.056
     ci_upper: 1.12
-    risk_allele_freq: 0.43
+    risk_allele_freq: 0.331
     description: Near XKR6; 8p21.2, genome-wide significant in ASD meta-analysis.
     source: PMID:30804558
   - rsid: rs1409313
@@ -260,6 +306,9 @@ asd:
     risk_allele_freq: 0.59
     description: Neuronal growth regulator 1; shared with intelligence and depression.
     source: PMID:30804558
+    unverified: true
+    unverified_reason: labelled chr1 but rsid is on chr10; actually chr10 PITX3/CUEDC2 locus (Anney 2017), not NEGR1 / Grove
+      2019
   - rsid: rs201910565
     gene: PTBP2
     chromosome: '1'
@@ -270,6 +319,8 @@ asd:
     risk_allele_freq: 0.28
     description: Polypyrimidine tract-binding protein 2; neuronal RNA splicing.
     source: PMID:30804558
+    unverified: true
+    unverified_reason: rsid not found in Ensembl
   - rsid: rs7001340
     gene: BRINP1
     chromosome: '9'
@@ -280,27 +331,67 @@ asd:
     risk_allele_freq: 0.38
     description: BMP/retinoic acid inducible neural specific 1; neuronal differentiation.
     source: PMID:33106633
+    unverified: true
+    unverified_reason: labelled chr9 but rsid is on chr8; cited PMID is a different paper (Single-cell epigenomic analyses
+      implicate candidate causal v...); source PMID unrelated; Matoba 2020 reports no OR for this MPRA-prioritized SNP (see
+      rs60527016)
+  - rsid: rs716219
+    gene: PTBP2 region (1p21.3)
+    chromosome: '1'
+    risk_allele: T
+    odds_ratio: 1.08
+    ci_lower: 1.05
+    ci_upper: 1.11
+    risk_allele_freq: 0.34
+    description: SNV lead at the 1p21.3 PTBP2 locus in SPARK+iPSYCH-PGC meta (P=6.4e-9); array-friendly proxy for the indel
+      rs201910565.
+    source: PMID:32747698
+  - rsid: rs111931861
+    gene: KMT2E/SRPK2
+    chromosome: '7'
+    risk_allele: G
+    odds_ratio: 1.241
+    ci_lower: 1.15
+    ci_upper: 1.34
+    risk_allele_freq: 0.034
+    description: KMT2E chromatin regulator locus (also a de novo ASD gene); genome-wide significant in Grove 2019 combined
+      analysis (P=3.5e-8). Low frequency.
+    source: PMID:30804558
+  - rsid: rs60527016
+    gene: DDHD2 region (8p11.23)
+    chromosome: '8'
+    risk_allele: T
+    odds_ratio: 1.075
+    ci_lower: 1.042
+    ci_upper: 1.099
+    risk_allele_freq: 0.79
+    description: 8p11.23 DDHD2 locus; genome-wide significant in SPARK alone, European meta P=3.1e-6 (Matoba 2020).
+    source: PMID:32747698
 adhd:
   name: Attention Deficit Hyperactivity Disorder (ADHD)
   short_name: ADHD
   prevalence: 0.05
   notes:
   - ADHD heritability is approximately 70-80%.
-  - Demontis et al. 2023 (PMID:36702997) is the largest ADHD GWAS (N=225,534) and identified 27 genome-wide significant loci.
-  - Dopamine and norepinephrine pathway genes (DAT1, DRD4, DRD2, DBH, NET) are the most-replicated candidate genes for ADHD.
-  - ADHD frequently co-occurs with ASD, dyslexia, and mood disorders; many genetic risk factors are shared across conditions.
-  - Environmental factors (prenatal exposures, early adversity) interact with genetic risk.
+  - Demontis et al. 2023 (PMID:36702997; 38,691 cases / 186,843 controls) identified 27 genome-wide significant loci; this
+    panel uses its index variants.
+  - van der Laan et al. 2025 (PMID:40962958) combined ADHD symptom scores with Demontis 2023 (N~299,000) and found 39 loci,
+    17 new (e.g. TCF12, CTNNA2, IGF1R); effects are on a symptom scale, so they are not included as ORs.
+  - None of the classic dopamine/noradrenaline candidate genes (DRD4, SLC6A3/DAT1, DRD2, COMT, DBH, SLC6A2) appears among
+    the GWAS loci; candidate-gene SNPs are weak, mostly unreplicated evidence.
+  - ADHD is genetically correlated with ASD (rG 0.43), dyslexia (0.53) and bipolar disorder (0.22), and negatively with intelligence
+    (-0.42) (Grotzinger 2026; Doust 2022; Demontis 2023).
   snps:
   - rsid: rs4916723
     gene: LINC00461/MIR9-2
     chromosome: '5'
-    risk_allele: A
-    odds_ratio: 1.08
-    ci_lower: 1.05
-    ci_upper: 1.11
-    risk_allele_freq: 0.55
+    risk_allele: C
+    odds_ratio: 1.089
+    ci_lower: 1.064
+    ci_upper: 1.111
+    risk_allele_freq: 0.427
     description: Intergenic; near MIR9-2 microRNA locus. First genome-wide significant ADHD hit.
-    source: PMID:30478444
+    source: PMID:36702997
   - rsid: rs28411770
     gene: SPAG16
     chromosome: '2'
@@ -311,6 +402,8 @@ adhd:
     risk_allele_freq: 0.42
     description: Sperm-associated antigen 16; genome-wide significant in ADHD meta-analysis.
     source: PMID:30478444
+    unverified: true
+    unverified_reason: labelled chr2 but rsid is on chr4
   - rsid: rs281324
     gene: KDM4A
     chromosome: '1'
@@ -321,6 +414,8 @@ adhd:
     risk_allele_freq: 0.64
     description: Lysine demethylase 4A; histone modification, chromatin remodeling in brain.
     source: PMID:30478444
+    unverified: true
+    unverified_reason: labelled chr1 but rsid is on chr15
   - rsid: rs8079781
     gene: SEMA6D
     chromosome: '15'
@@ -331,6 +426,9 @@ adhd:
     risk_allele_freq: 0.76
     description: Semaphorin-6D; axon guidance molecule, neural connectivity.
     source: PMID:30478444
+    unverified: true
+    unverified_reason: labelled chr15 but rsid is on chr17; risk allele G not an allele of this SNP; not a Demontis 2019 locus;
+      actually chr17
   - rsid: rs212178
     gene: ST3GAL3
     chromosome: '1'
@@ -341,6 +439,8 @@ adhd:
     risk_allele_freq: 0.51
     description: Sialyltransferase; glycosylation enzyme involved in neural development.
     source: PMID:30478444
+    unverified: true
+    unverified_reason: labelled chr1 but rsid is on chr16
   - rsid: rs1222063
     gene: FOXP2
     chromosome: '7'
@@ -351,6 +451,8 @@ adhd:
     risk_allele_freq: 0.32
     description: Forkhead box P2; speech/language gene, neurodevelopmental overlap with ADHD.
     source: PMID:30478444
+    unverified: true
+    unverified_reason: labelled chr7 but rsid is on chr1
   - rsid: rs2906457
     gene: SORCS3
     chromosome: '10'
@@ -361,6 +463,8 @@ adhd:
     risk_allele_freq: 0.58
     description: Sortilin-related VPS10 domain containing receptor 3; synaptic signaling.
     source: PMID:30478444
+    unverified: true
+    unverified_reason: labelled chr10 but rsid is on chr1
   - rsid: rs1427829
     gene: DUSP6
     chromosome: '12'
@@ -371,6 +475,8 @@ adhd:
     risk_allele_freq: 0.67
     description: Dual specificity phosphatase 6; MAPK signaling in dopaminergic neurons.
     source: PMID:30478444
+    unverified: true
+    unverified_reason: same DUSP6 locus as rs704061 (double counting)
   - rsid: rs1800544
     gene: ADRA2A
     chromosome: '10'
@@ -381,16 +487,20 @@ adhd:
     risk_allele_freq: 0.27
     description: Alpha-2A adrenergic receptor; norepinephrine signaling, attention regulation.
     source: PMID:17453600
+    unverified: true
+    unverified_reason: 'cited PMID is a different paper (HIV testing and disclosure: a qualitative analysis of TB pat...)'
   - rsid: rs1801260
     gene: CLOCK
     chromosome: '4'
-    risk_allele: C
+    risk_allele: G
     odds_ratio: 1.12
     ci_lower: 1.03
     ci_upper: 1.22
     risk_allele_freq: 0.28
     description: Circadian clock gene; circadian rhythm disruption common in ADHD.
     source: PMID:18449190
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Chemically ubiquitylated histone H2B stimulates hDot1L-media...)
   - rsid: rs1611115
     gene: DBH
     chromosome: '9'
@@ -401,16 +511,20 @@ adhd:
     risk_allele_freq: 0.22
     description: Dopamine beta-hydroxylase promoter; converts dopamine to norepinephrine.
     source: PMID:16998993
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Policy watch. Focus on the men?...)
   - rsid: rs5569
     gene: SLC6A2 (NET)
     chromosome: '16'
-    risk_allele: T
+    risk_allele: A
     odds_ratio: 1.13
     ci_lower: 1.03
     ci_upper: 1.24
     risk_allele_freq: 0.41
     description: Norepinephrine transporter; target of ADHD medications (atomoxetine).
     source: PMID:18759316
+    unverified: true
+    unverified_reason: 'cited PMID is a different paper (Disease activity of rheumatoid arthritis during pregnancy: r...)'
   - rsid: rs27072
     gene: SLC6A3 (DAT1)
     chromosome: '5'
@@ -421,6 +535,8 @@ adhd:
     risk_allele_freq: 0.29
     description: Dopamine transporter; regulates dopamine reuptake, core ADHD candidate gene.
     source: PMID:20732625
+    unverified: true
+    unverified_reason: cited Neale 2010 ADHD GWAS meta-analysis found no significant loci; OR source unclear
   - rsid: rs1800497
     gene: ANKK1/DRD2
     chromosome: '11'
@@ -431,26 +547,32 @@ adhd:
     risk_allele_freq: 0.2
     description: Taq1A polymorphism; near DRD2, dopamine D2 receptor density variation.
     source: PMID:20732625
+    unverified: true
+    unverified_reason: cited Neale 2010 ADHD GWAS meta-analysis found no significant loci; OR source unclear
   - rsid: rs1799978
     gene: DRD2
     chromosome: '11'
-    risk_allele: G
+    risk_allele: C
     odds_ratio: 1.11
     ci_lower: 1.02
     ci_upper: 1.21
     risk_allele_freq: 0.06
     description: Dopamine receptor D2 promoter variant; reward processing and impulsivity.
     source: PMID:20732625
+    unverified: true
+    unverified_reason: cited Neale 2010 ADHD GWAS meta-analysis found no significant loci; OR source unclear
   - rsid: rs6277
     gene: DRD2
     chromosome: '11'
-    risk_allele: T
+    risk_allele: A
     odds_ratio: 1.12
     ci_lower: 1.04
     ci_upper: 1.21
     risk_allele_freq: 0.44
     description: DRD2 C957T; alters D2 receptor availability in striatum.
     source: PMID:17440431
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Metabolomic mapping of atypical antipsychotic effects in sch...)
   - rsid: rs1800955
     gene: DRD4
     chromosome: '11'
@@ -461,6 +583,8 @@ adhd:
     risk_allele_freq: 0.4
     description: Dopamine receptor D4 promoter; DRD4 is the most-replicated ADHD gene.
     source: PMID:11244486
+    unverified: true
+    unverified_reason: cited PMID is a different paper (No association or linkage between polymorphisms in the genes...)
   - rsid: rs2283265
     gene: DRD2
     chromosome: '11'
@@ -471,6 +595,8 @@ adhd:
     risk_allele_freq: 0.15
     description: DRD2 intronic SNP; affects alternative splicing of D2 receptor isoforms.
     source: PMID:17440431
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Metabolomic mapping of atypical antipsychotic effects in sch...)
   - rsid: rs4680
     gene: COMT
     chromosome: '22'
@@ -481,6 +607,8 @@ adhd:
     risk_allele_freq: 0.49
     description: Val158Met; Met allele = slower dopamine clearance in prefrontal cortex.
     source: PMID:18414213
+    unverified: true
+    unverified_reason: cited PMID is a different paper (ACMG recommendations for standards for interpretation and re...)
   - rsid: rs40184
     gene: SLC6A3 (DAT1)
     chromosome: '5'
@@ -491,6 +619,8 @@ adhd:
     risk_allele_freq: 0.35
     description: DAT1 intronic variant; dopamine transporter expression in striatum.
     source: PMID:20732625
+    unverified: true
+    unverified_reason: cited Neale 2010 ADHD GWAS meta-analysis found no significant loci; OR source unclear
   - rsid: rs11210892
     gene: CDH13
     chromosome: '16'
@@ -501,6 +631,8 @@ adhd:
     risk_allele_freq: 0.52
     description: Cadherin 13; replicated in multiple ADHD GWAS, also linked to substance abuse.
     source: PMID:22610946
+    unverified: true
+    unverified_reason: labelled chr16 but rsid is on chr1
   - rsid: rs6565113
     gene: SNAP25
     chromosome: '20'
@@ -511,16 +643,21 @@ adhd:
     risk_allele_freq: 0.17
     description: Synaptosomal-associated protein 25; synaptic vesicle exocytosis, ADHD candidate.
     source: PMID:16505834
+    unverified: true
+    unverified_reason: labelled chr20 but rsid is on chr16; cited PMID is a different paper (Evalution of the castrated male
+      Sprague-Dawley rat as a mode...)
   - rsid: rs16856468
     gene: PTBP2
     chromosome: '1'
-    risk_allele: T
+    risk_allele: A
     odds_ratio: 1.06
     ci_lower: 1.04
     ci_upper: 1.09
     risk_allele_freq: 0.35
     description: Polypyrimidine tract-binding protein 2; neuronal RNA splicing, shared with ASD.
     source: PMID:36702997
+    unverified: true
+    unverified_reason: not among the Demontis 2023 index variants
   - rsid: rs9677504
     gene: MANBA
     chromosome: '4'
@@ -531,6 +668,8 @@ adhd:
     risk_allele_freq: 0.6
     description: Mannosidase beta; lysosomal enzyme, novel ADHD locus.
     source: PMID:36702997
+    unverified: true
+    unverified_reason: labelled chr4 but rsid is on chr2
   - rsid: rs227378
     gene: DUSP6
     chromosome: '12'
@@ -541,6 +680,8 @@ adhd:
     risk_allele_freq: 0.53
     description: Dual specificity phosphatase 6; MAPK pathway in dopaminergic neurons.
     source: PMID:36702997
+    unverified: true
+    unverified_reason: labelled chr12 but rsid is on chr4
   - rsid: rs4321351
     gene: PCDH7
     chromosome: '4'
@@ -551,6 +692,8 @@ adhd:
     risk_allele_freq: 0.47
     description: Protocadherin 7; cell adhesion in neural development.
     source: PMID:36702997
+    unverified: true
+    unverified_reason: labelled chr4 but rsid is on chr2; risk allele C not an allele of this SNP
   - rsid: rs3768046
     gene: TIE1
     chromosome: '1'
@@ -561,6 +704,8 @@ adhd:
     risk_allele_freq: 0.42
     description: Tyrosine kinase with Ig-like domains 1; vascular-neuronal signaling.
     source: PMID:36702997
+    unverified: true
+    unverified_reason: not among the Demontis 2023 index variants
   - rsid: rs2279574
     gene: METTL15
     chromosome: '11'
@@ -571,14 +716,139 @@ adhd:
     risk_allele_freq: 0.48
     description: Methyltransferase-like 15; RNA modification, novel ADHD locus.
     source: PMID:36702997
+    unverified: true
+    unverified_reason: labelled chr11 but rsid is on chr12
+  - rsid: rs549845
+    gene: PTPRF/KDM4A
+    chromosome: '1'
+    risk_allele: G
+    odds_ratio: 1.082
+    ci_lower: 1.06
+    ci_upper: 1.1
+    risk_allele_freq: 0.326
+    description: Near PTPRF/KDM4A (1p34.2); among the strongest ADHD loci (P=9.0e-15), replicated from Demontis 2019.
+    source: PMID:36702997
+  - rsid: rs2582895
+    gene: METTL15
+    chromosome: '11'
+    risk_allele: C
+    odds_ratio: 1.075
+    ci_lower: 1.06
+    ci_upper: 1.09
+    risk_allele_freq: 0.618
+    description: Near METTL15 (11p14.1); novel ADHD locus, P=4.1e-14.
+    source: PMID:36702997
+  - rsid: rs77960
+    gene: Intergenic (5q21.2)
+    chromosome: '5'
+    risk_allele: A
+    odds_ratio: 1.076
+    ci_lower: 1.053
+    ci_upper: 1.099
+    risk_allele_freq: 0.318
+    description: Intergenic 5q21.2 locus; novel ADHD locus, P=2.5e-13.
+    source: PMID:36702997
+  - rsid: rs6082363
+    gene: XRN2/NKX2-4
+    chromosome: '20'
+    risk_allele: T
+    odds_ratio: 1.073
+    ci_lower: 1.05
+    ci_upper: 1.09
+    risk_allele_freq: 0.291
+    description: 20p11.21 XRN2/NKX2-4 region, same region as the ASD KIZ/XRN2 locus; P=4.4e-12.
+    source: PMID:36702997
+  - rsid: rs9969232
+    gene: FOXP2
+    chromosome: '7'
+    risk_allele: A
+    odds_ratio: 1.071
+    ci_lower: 1.053
+    ci_upper: 1.099
+    risk_allele_freq: 0.618
+    description: FOXP2 intronic; language/speech gene, replicated ADHD locus, P=1.0e-11.
+    source: PMID:36702997
+  - rsid: rs17718444
+    gene: FOXP1
+    chromosome: '3'
+    risk_allele: C
+    odds_ratio: 1.063
+    ci_lower: 1.04
+    ci_upper: 1.08
+    risk_allele_freq: 0.66
+    description: FOXP1; transcription factor also implicated in ASD/ID; P=2.9e-9.
+    source: PMID:36702997
+  - rsid: rs1162202
+    gene: CDH8
+    chromosome: '16'
+    risk_allele: C
+    odds_ratio: 1.063
+    ci_lower: 1.04
+    ci_upper: 1.08
+    risk_allele_freq: 0.606
+    description: Cadherin 8; synaptic adhesion, novel ADHD locus, P=1.9e-9.
+    source: PMID:36702997
+  - rsid: rs11596214
+    gene: SORCS3
+    chromosome: '10'
+    risk_allele: G
+    odds_ratio: 1.054
+    ci_lower: 1.03
+    ci_upper: 1.07
+    risk_allele_freq: 0.569
+    description: SORCS3; sortilin-related receptor, also enriched for rare PTVs in ADHD; P=3.2e-8.
+    source: PMID:36702997
+  - rsid: rs704061
+    gene: DUSP6/POC1B
+    chromosome: '12'
+    risk_allele: C
+    odds_ratio: 1.057
+    ci_lower: 1.031
+    ci_upper: 1.075
+    risk_allele_freq: 0.44
+    description: DUSP6 region (12q21.33); dopamine-related MAPK phosphatase, P=2.3e-9.
+    source: PMID:36702997
+  - rsid: rs1438898
+    gene: Intergenic (2q22.3)
+    chromosome: '2'
+    risk_allele: A
+    odds_ratio: 1.065
+    ci_lower: 1.05
+    ci_upper: 1.08
+    risk_allele_freq: 0.769
+    description: Intergenic 2q22.3 near TEX41; novel ADHD locus, P=4.9e-9.
+    source: PMID:36702997
+  - rsid: rs7506904
+    gene: DCC
+    chromosome: '18'
+    risk_allele: A
+    odds_ratio: 1.057
+    ci_lower: 1.031
+    ci_upper: 1.075
+    risk_allele_freq: 0.628
+    description: DCC netrin receptor; axon guidance, dopaminergic wiring; P=1.2e-8.
+    source: PMID:36702997
+  - rsid: rs2886697
+    gene: SGO1-AS1 (3p24.3)
+    chromosome: '3'
+    risk_allele: G
+    odds_ratio: 1.061
+    ci_lower: 1.04
+    ci_upper: 1.08
+    risk_allele_freq: 0.643
+    description: 3p24.3 locus (SGO1-AS1); replicated from Demontis 2019, P=7.9e-10.
+    source: PMID:36702997
 dyslexia:
   name: Dyslexia (Reading Disability)
   short_name: DYSLEXIA
   prevalence: 0.07
   notes:
   - Dyslexia heritability is approximately 40-60%.
-  - Strongest associations are on chromosome 6p22 (DCDC2, KIAA0319) — involved in neuronal migration during brain development.
-  - Dyslexia frequently co-occurs with ADHD (~30-50% comorbidity) and shares some genetic risk factors.
+  - The largest dyslexia GWAS (Doust et al. 2022, PMID:36266505; 23andMe, 51,800 cases / 1.09M controls) found 42 genome-wide
+    significant loci, 27 new. Each common variant raises odds only about 4-7%.
+  - None of the classic candidate genes (DCDC2, KIAA0319, DYX1C1, ROBO1) reached genome-wide significance in the large GWAS.
+  - Dyslexia shows genetic correlation ~0.53 with ADHD, ~-0.50 with fluid intelligence, and ~0.38 with ambidexterity (Doust
+    2022).
   - Reading ability is a continuous trait; dyslexia represents the lower tail of a normal distribution.
   snps:
   - rsid: rs3743204
@@ -591,6 +861,9 @@ dyslexia:
     risk_allele_freq: 0.3
     description: Doublecortin domain-containing 2; neuronal migration, reading disability locus on 6p22.
     source: PMID:16341550
+    unverified: true
+    unverified_reason: labelled chr6 but rsid is on chr15; cited PMID is a different paper (Aberrant splicing in MLH1 and
+      MSH2 due to exonic and introni...)
   - rsid: rs793842
     gene: DCDC2
     chromosome: '6'
@@ -601,6 +874,8 @@ dyslexia:
     risk_allele_freq: 0.4
     description: DCDC2 variant; one of the strongest dyslexia candidate gene associations.
     source: PMID:16341550
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Aberrant splicing in MLH1 and MSH2 due to exonic and introni...)
   - rsid: rs4504469
     gene: KIAA0319
     chromosome: '6'
@@ -611,6 +886,8 @@ dyslexia:
     risk_allele_freq: 0.3
     description: KIAA0319 on 6p22; neuronal migration, most-replicated dyslexia gene.
     source: PMID:15668073
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Ability to identify, explain and solve problems in everyday...)
   - rsid: rs2143340
     gene: KIAA0319
     chromosome: '6'
@@ -621,6 +898,8 @@ dyslexia:
     risk_allele_freq: 0.25
     description: KIAA0319 promoter-associated variant; reduced expression linked to dyslexia.
     source: PMID:15668073
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Ability to identify, explain and solve problems in everyday...)
   - rsid: rs6935076
     gene: KIAA0319
     chromosome: '6'
@@ -631,6 +910,8 @@ dyslexia:
     risk_allele_freq: 0.38
     description: KIAA0319 regulatory region; alters gene expression in developing brain.
     source: PMID:17254013
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Amyloid beta peptide ratio 42/40 but not A beta 42 correlate...)
   - rsid: rs3212236
     gene: DYX1C1
     chromosome: '15'
@@ -641,6 +922,8 @@ dyslexia:
     risk_allele_freq: 0.22
     description: Dyslexia susceptibility 1 candidate 1; neuronal migration and cilia function.
     source: PMID:12954984
+    unverified: true
+    unverified_reason: labelled chr15 but rsid is on chr6; risk allele G not an allele of this SNP
   - rsid: rs17243157
     gene: ROBO1
     chromosome: '3'
@@ -651,6 +934,9 @@ dyslexia:
     risk_allele_freq: 0.18
     description: Roundabout guidance receptor 1; axon guidance, inter-hemispheric connectivity.
     source: PMID:15688174
+    unverified: true
+    unverified_reason: labelled chr3 but rsid is on chr6; risk allele G not an allele of this SNP; cited PMID is a different
+      paper (Impact of repetitive transcranial magnetic stimulation of th...)
   - rsid: rs6803202
     gene: FOXP2
     chromosome: '7'
@@ -661,6 +947,9 @@ dyslexia:
     risk_allele_freq: 0.5
     description: Forkhead box P2; language-related gene, reading ability association.
     source: PMID:23022143
+    unverified: true
+    unverified_reason: labelled chr7 but rsid is on chr3; cited PMID is a different paper (Tissue-dependence and sensitivity
+      of the systemic RNA interf...)
   - rsid: rs12636438
     gene: CNTNAP2
     chromosome: '7'
@@ -671,6 +960,8 @@ dyslexia:
     risk_allele_freq: 0.35
     description: CNTNAP2; language-related neurodevelopment, shared ASD/dyslexia risk.
     source: PMID:19404256
+    unverified: true
+    unverified_reason: labelled chr7 but rsid is on chr3; risk allele T not an allele of this SNP
   - rsid: rs2038137
     gene: MRPL19/GCFC2
     chromosome: '2'
@@ -681,6 +972,9 @@ dyslexia:
     risk_allele_freq: 0.55
     description: Mitochondrial ribosomal protein L19; 2p12 dyslexia locus.
     source: PMID:21151127
+    unverified: true
+    unverified_reason: labelled chr2 but rsid is on chr6; cited PMID is a different paper (Genome-wide association analysis
+      in primary sclerosing chola...)
   - rsid: rs807701
     gene: CMIP
     chromosome: '16'
@@ -691,6 +985,9 @@ dyslexia:
     risk_allele_freq: 0.45
     description: C-Maf-inducing protein; 16q reading/language locus, phonological processing.
     source: PMID:21151127
+    unverified: true
+    unverified_reason: labelled chr16 but rsid is on chr6; cited PMID is a different paper (Genome-wide association analysis
+      in primary sclerosing chola...)
   - rsid: rs17236239
     gene: ATP2C2
     chromosome: '16'
@@ -701,16 +998,135 @@ dyslexia:
     risk_allele_freq: 0.28
     description: ATPase secretory pathway Ca2+ transporting 2; language-related SNP on 16q.
     source: PMID:21151127
+    unverified: true
+    unverified_reason: labelled chr16 but rsid is on chr7; cited PMID is a different paper (Genome-wide association analysis
+      in primary sclerosing chola...)
+  - rsid: rs13082684
+    gene: PPP2R3A
+    chromosome: '3'
+    risk_allele: A
+    odds_ratio: 1.07
+    ci_lower: 1.05
+    ci_upper: 1.09
+    risk_allele_freq: 0.24
+    description: Protein phosphatase 2 regulatory subunit B''alpha (3q22.3); top dyslexia GWAS hit (P=1e-16), replicated in
+      GenLang.
+    source: PMID:36266505
+  - rsid: rs4911257
+    gene: DNMT3B
+    chromosome: '20'
+    risk_allele: C
+    odds_ratio: 1.055
+    ci_lower: 1.04
+    ci_upper: 1.07
+    risk_allele_freq: 0.39
+    description: DNA methyltransferase 3 beta intronic variant (20q11.21); novel dyslexia locus (P=7.5e-14).
+    source: PMID:36266505
+  - rsid: rs12453682
+    gene: NEUROD2/PPP1R1B
+    chromosome: '17'
+    risk_allele: T
+    odds_ratio: 1.056
+    ci_lower: 1.04
+    ci_upper: 1.07
+    risk_allele_freq: 0.68
+    description: 17q12 locus near NEUROD2 and DARPP-32 (PPP1R1B); shared with cognitive/educational traits (P=3e-12).
+    source: PMID:36266505
+  - rsid: rs72916919
+    gene: RFTN2/MARS2
+    chromosome: '2'
+    risk_allele: G
+    odds_ratio: 1.049
+    ci_lower: 1.035
+    ci_upper: 1.065
+    risk_allele_freq: 0.51
+    description: 2q33.1 locus (RFTN2; most probable gene MARS2); novel dyslexia locus replicated in NeuroDys and GenLang.
+    source: PMID:36266505
+  - rsid: rs12737449
+    gene: C1orf87
+    chromosome: '1'
+    risk_allele: G
+    odds_ratio: 1.07
+    ci_lower: 1.05
+    ci_upper: 1.09
+    risk_allele_freq: 0.85
+    description: C1orf87 missense variant (1p32.1); novel dyslexia locus (P=1.4e-11).
+    source: PMID:36266505
+  - rsid: rs676217
+    gene: ARL14EP/KCNA4
+    chromosome: '11'
+    risk_allele: G
+    odds_ratio: 1.05
+    ci_lower: 1.036
+    ci_upper: 1.066
+    risk_allele_freq: 0.37
+    description: 11p14.1 locus near KCNA4/FSHB (most probable gene ARL14EP); novel dyslexia locus (P=1.1e-11).
+    source: PMID:36266505
+  - rsid: rs7310615
+    gene: SH2B3
+    chromosome: '12'
+    risk_allele: G
+    odds_ratio: 1.047
+    ci_lower: 1.032
+    ci_upper: 1.061
+    risk_allele_freq: 0.5
+    description: SH2B adaptor protein 3 (12q24.12); pleiotropic locus, genome-wide significant for dyslexia (P=1e-10).
+    source: PMID:36266505
+  - rsid: rs10511073
+    gene: CADM2
+    chromosome: '3'
+    risk_allele: A
+    odds_ratio: 1.046
+    ci_lower: 1.031
+    ci_upper: 1.06
+    risk_allele_freq: 0.37
+    description: Cell adhesion molecule 2 (3p12.1); synaptic adhesion gene linked to cognition/risk-taking; replicated in
+      GenLang.
+    source: PMID:36266505
+  - rsid: rs6435017
+    gene: SATB2
+    chromosome: '2'
+    risk_allele: C
+    odds_ratio: 1.042
+    ci_lower: 1.028
+    ci_upper: 1.057
+    risk_allele_freq: 0.57
+    description: SATB homeobox 2 (2q33.1); cortical neuron identity gene, cognitive-ability-shared dyslexia locus (P=5e-9).
+    source: PMID:36266505
+  - rsid: rs4845687
+    gene: KCNN3/PMVK
+    chromosome: '1'
+    risk_allele: A
+    odds_ratio: 1.044
+    ci_lower: 1.03
+    ci_upper: 1.058
+    risk_allele_freq: 0.56
+    description: 1q21.3 locus (KCNN3 potassium channel / PMVK); novel dyslexia locus replicated in GenLang.
+    source: PMID:36266505
+  - rsid: rs9696811
+    gene: IER5L/PTPA (9q34.11)
+    chromosome: '9'
+    risk_allele: C
+    odds_ratio: 1.06
+    ci_lower: 1.045
+    ci_upper: 1.078
+    risk_allele_freq: 0.69
+    description: 9q34.11 dyslexia locus (P=1e-14); values from GWAS Catalog GCST90244674 (paper Table 1 gene label appears
+      to be a copy error).
+    source: PMID:36266505
 ocd:
   name: Obsessive-Compulsive Disorder (OCD)
   short_name: OCD
   prevalence: 0.025
   notes:
   - OCD heritability is approximately 40-65%.
-  - The glutamate transporter gene SLC1A1 (EAAC1) is the most-replicated OCD candidate gene.
-  - Serotonin genes (SLC6A4, HTR2A) are implicated because SSRIs are first-line treatment for OCD.
-  - GWAS sample sizes for OCD are still smaller than for ADHD or ASD, so fewer genome-wide significant hits have been identified.
-  - OCD often co-occurs with Tourette syndrome, ASD, and anxiety disorders.
+  - Strom et al. 2025 (PMID:40360802; 53,660 cases / 2.04M controls) identified 30 genome-wide significant loci. Per-allele
+    ORs are small (~1.04-1.08); ~11,500 variants explain 90% of SNP heritability.
+  - OCD risk genes point to hippocampal and cortical excitatory neurons and D1/D2 striatal medium spiny neurons.
+  - Classic candidate genes (SLC1A1, HTR2A, SLC6A4, COMT, DLGAP1, BTBD3) were not genome-wide significant in the 2025 PGC-OCD
+    GWAS.
+  - OCD is genetically correlated with Tourette syndrome (rG 0.41), schizophrenia (0.34), ASD (0.33) and bipolar disorder
+    (0.33) (Grotzinger 2026).
   snps:
   - rsid: rs2581789
     gene: PTPRD
@@ -722,6 +1138,8 @@ ocd:
     risk_allele_freq: 0.35
     description: Protein tyrosine phosphatase receptor D; synapse formation, genome-wide significant in OCD.
     source: PMID:28761083
+    unverified: true
+    unverified_reason: labelled chr9 but rsid is on chr3; actually chr3 ITIH locus (OR ~1.05), same signal as rs2564930
   - rsid: rs6131295
     gene: BTBD3
     chromosome: '20'
@@ -732,6 +1150,8 @@ ocd:
     risk_allele_freq: 0.62
     description: BTB domain-containing 3; dendritic orientation in somatosensory cortex.
     source: PMID:22889923
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Another view of the history of antipsychotic drug discovery...)
   - rsid: rs297941
     gene: DLGAP1
     chromosome: '18'
@@ -742,6 +1162,9 @@ ocd:
     risk_allele_freq: 0.55
     description: Discs large-associated protein 1; post-synaptic density, glutamate signaling.
     source: PMID:22889923
+    unverified: true
+    unverified_reason: labelled chr18 but rsid is on chr12; cited PMID is a different paper (Another view of the history of
+      antipsychotic drug discovery...)
   - rsid: rs6311
     gene: HTR2A
     chromosome: '13'
@@ -752,6 +1175,8 @@ ocd:
     risk_allele_freq: 0.46
     description: Serotonin receptor 2A promoter; serotonergic system central to OCD pathology.
     source: PMID:17266101
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Bias between MNI and Talairach coordinates analyzed using th...)
   - rsid: rs6313
     gene: HTR2A
     chromosome: '13'
@@ -762,6 +1187,8 @@ ocd:
     risk_allele_freq: 0.44
     description: HTR2A synonymous variant; linked with OCD symptom severity.
     source: PMID:17266101
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Bias between MNI and Talairach coordinates analyzed using th...)
   - rsid: rs25531
     gene: SLC6A4 (5-HTTLPR)
     chromosome: '17'
@@ -772,6 +1199,8 @@ ocd:
     risk_allele_freq: 0.1
     description: Serotonin transporter; SSRIs are first-line OCD treatment. L-G allele = low expression.
     source: PMID:19568583
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Male gender and laparoscopic cholecystectomy....)
   - rsid: rs4680
     gene: COMT
     chromosome: '22'
@@ -782,6 +1211,8 @@ ocd:
     risk_allele_freq: 0.49
     description: Val158Met; Met allele linked to compulsive behaviors and OCD in some studies.
     source: PMID:18414213
+    unverified: true
+    unverified_reason: cited PMID is a different paper (ACMG recommendations for standards for interpretation and re...)
   - rsid: rs3780413
     gene: GRIN2B
     chromosome: '12'
@@ -792,6 +1223,9 @@ ocd:
     risk_allele_freq: 0.3
     description: NMDA receptor subunit 2B; glutamatergic dysfunction in OCD.
     source: PMID:22005930
+    unverified: true
+    unverified_reason: labelled chr12 but rsid is on chr9; cited PMID is a different paper (Genome-wide association study
+      of Alzheimer's disease with ps...)
   - rsid: rs1805502
     gene: GRIN2B
     chromosome: '12'
@@ -802,6 +1236,8 @@ ocd:
     risk_allele_freq: 0.35
     description: GRIN2B variant; glutamate neurotransmission in cortico-striato-thalamic circuit.
     source: PMID:22005930
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Genome-wide association study of Alzheimer's disease with ps...)
   - rsid: rs3813929
     gene: HTR2C
     chromosome: X
@@ -812,16 +1248,20 @@ ocd:
     risk_allele_freq: 0.14
     description: Serotonin receptor 2C promoter; affects receptor expression in frontal cortex.
     source: PMID:17266101
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Bias between MNI and Talairach coordinates analyzed using th...)
   - rsid: rs1799836
     gene: MAOB
     chromosome: X
-    risk_allele: G
+    risk_allele: C
     odds_ratio: 1.13
     ci_lower: 1.03
     ci_upper: 1.24
     risk_allele_freq: 0.36
     description: Monoamine oxidase B; monoamine metabolism, OCD candidate gene.
     source: PMID:15557292
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Grafting raises the salt tolerance of tomato through limitin...)
   - rsid: rs167771
     gene: OLIG2
     chromosome: '21'
@@ -832,6 +1272,9 @@ ocd:
     risk_allele_freq: 0.4
     description: Oligodendrocyte transcription factor 2; white matter integrity in OCD.
     source: PMID:22889923
+    unverified: true
+    unverified_reason: labelled chr21 but rsid is on chr3; cited PMID is a different paper (Another view of the history of
+      antipsychotic drug discovery...)
   - rsid: rs301430
     gene: SLC1A1 (EAAC1)
     chromosome: '9'
@@ -842,6 +1285,8 @@ ocd:
     risk_allele_freq: 0.48
     description: Neuronal glutamate transporter; most-replicated OCD candidate gene.
     source: PMID:19448621
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Genome-wide association studies identify loci associated wit...)
   - rsid: rs301434
     gene: SLC1A1 (EAAC1)
     chromosome: '9'
@@ -852,16 +1297,18 @@ ocd:
     risk_allele_freq: 0.44
     description: SLC1A1 regulatory variant; glutamate signaling in fronto-striatal circuits.
     source: PMID:19448621
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Genome-wide association studies identify loci associated wit...)
   - rsid: rs13262595
-    gene: WDR7
-    chromosome: '18'
-    risk_allele: C
-    odds_ratio: 1.12
-    ci_lower: 1.07
-    ci_upper: 1.17
-    risk_allele_freq: 0.55
-    description: WD repeat domain 7; first genome-wide significant locus for OCD (2021).
-    source: PMID:34210352
+    gene: TSNARE1
+    chromosome: '8'
+    risk_allele: A
+    odds_ratio: 1.045
+    ci_lower: 1.032
+    ci_upper: 1.059
+    risk_allele_freq: 0.44
+    description: TSNARE1 intronic (8q24.3); genome-wide significant OCD locus (P=1.3e-11), also a schizophrenia locus.
+    source: PMID:40360802
   - rsid: rs12688326
     gene: GRID2
     chromosome: '4'
@@ -872,6 +1319,8 @@ ocd:
     risk_allele_freq: 0.35
     description: Glutamate ionotropic receptor delta type 2; Purkinje cell signaling, OCD.
     source: PMID:28761083
+    unverified: true
+    unverified_reason: labelled chr4 but rsid is on chrX; risk allele A not an allele of this SNP
   - rsid: rs6733825
     gene: CASP9
     chromosome: '1'
@@ -882,15 +1331,141 @@ ocd:
     risk_allele_freq: 0.42
     description: Caspase 9; programmed cell death in neurodevelopment, OCD GWAS signal.
     source: PMID:28761083
+    unverified: true
+    unverified_reason: labelled chr1 but rsid is on chr2; risk allele G not an allele of this SNP
+  - rsid: rs78587207
+    gene: YPEL4/CTNND1 (11q12)
+    chromosome: '11'
+    risk_allele: G
+    odds_ratio: 1.05
+    ci_lower: 1.036
+    ci_upper: 1.065
+    risk_allele_freq: 0.32
+    description: Top OCD GWAS locus (P=5.3e-12) in PGC-OCD 2025; gene-dense 11q12 region, CTNND1 among prioritized genes.
+    source: PMID:40360802
+  - rsid: rs4990036
+    gene: MHC region (HLA-B)
+    chromosome: '6'
+    risk_allele: C
+    odds_ratio: 1.075
+    ci_lower: 1.053
+    ci_upper: 1.098
+    risk_allele_freq: 0.88
+    description: MHC class I region signal (P=1.4e-11); PsyOPS prioritizes HLA-B.
+    source: PMID:40360802
+  - rsid: rs10877425
+    gene: Intergenic (12q14.2)
+    chromosome: '12'
+    risk_allele: A
+    odds_ratio: 1.05
+    ci_lower: 1.035
+    ci_upper: 1.065
+    risk_allele_freq: 0.48
+    description: Intergenic 12q14.2 OCD locus (P=1.6e-11), no protein-coding gene within 50 kb.
+    source: PMID:40360802
+  - rsid: rs7626445
+    gene: CELSR3/QRICH1 (3p21.31)
+    chromosome: '3'
+    risk_allele: C
+    odds_ratio: 1.047
+    ci_lower: 1.033
+    ci_upper: 1.061
+    risk_allele_freq: 0.35
+    description: 3p21.31 OCD locus (P=1.7e-11); region with CELSR3, also implicated in Tourette syndrome.
+    source: PMID:40360802
+  - rsid: rs2564930
+    gene: ITIH1/ITIH3/NEK4 (3p21.1)
+    chromosome: '3'
+    risk_allele: C
+    odds_ratio: 1.048
+    ci_lower: 1.033
+    ci_upper: 1.062
+    risk_allele_freq: 0.66
+    description: Pleiotropic psychiatric locus at 3p21.1 (P=3.4e-11), shared with schizophrenia and bipolar disorder.
+    source: PMID:40360802
+  - rsid: rs4702
+    gene: FURIN
+    chromosome: '15'
+    risk_allele: G
+    odds_ratio: 1.041
+    ci_lower: 1.028
+    ci_upper: 1.055
+    risk_allele_freq: 0.45
+    description: FURIN 3'UTR variant (P=9.1e-10); cross-disorder locus also significant in schizophrenia and bipolar disorder.
+    source: PMID:40360802
+  - rsid: rs35518360
+    gene: SLC39A8
+    chromosome: '4'
+    risk_allele: T
+    odds_ratio: 1.076
+    ci_lower: 1.051
+    ci_upper: 1.102
+    risk_allele_freq: 0.076
+    description: Lower-frequency risk variant at the SLC39A8 (zinc/manganese transporter) locus (P=1.4e-9).
+    source: PMID:40360802
+  - rsid: rs254779
+    gene: MEF2C
+    chromosome: '5'
+    risk_allele: C
+    odds_ratio: 1.041
+    ci_lower: 1.027
+    ci_upper: 1.055
+    risk_allele_freq: 0.58
+    description: MEF2C region (P=1.5e-9); synaptic transcription factor also implicated in ADHD, schizophrenia and neurodevelopmental
+      disorders.
+    source: PMID:40360802
+  - rsid: rs12516488
+    gene: HCN1
+    chromosome: '5'
+    risk_allele: G
+    odds_ratio: 1.053
+    ci_lower: 1.035
+    ci_upper: 1.071
+    risk_allele_freq: 0.83
+    description: HCN1 hyperpolarization-activated cation channel (P=3.8e-9); also gene-based significant.
+    source: PMID:40360802
+  - rsid: rs11263940
+    gene: GRIK3
+    chromosome: '1'
+    risk_allele: C
+    odds_ratio: 1.044
+    ci_lower: 1.029
+    ci_upper: 1.059
+    risk_allele_freq: 0.31
+    description: Near GRIK3 kainate glutamate receptor (P=7.2e-9); supports glutamatergic involvement in OCD.
+    source: PMID:40360802
+  - rsid: rs9287859
+    gene: SCN2A/CSRNP3
+    chromosome: '2'
+    risk_allele: A
+    odds_ratio: 1.042
+    ci_lower: 1.028
+    ci_upper: 1.057
+    risk_allele_freq: 0.61
+    description: SCN2A/CSRNP3 locus (P=9.8e-9); SCN2A is a neurodevelopmental/autism gene.
+    source: PMID:40360802
+  - rsid: rs6474628
+    gene: PTPRD
+    chromosome: '9'
+    risk_allele: T
+    odds_ratio: 1.038
+    ci_lower: 1.025
+    ci_upper: 1.051
+    risk_allele_freq: 0.585
+    description: Genome-wide significant PTPRD-region OCD signal at 9p23 (P=1.9e-8).
+    source: PMID:40360802
 tourette:
   name: Tourette Syndrome (TS)
   short_name: TOURETTE
   prevalence: 0.008
   notes:
   - Tourette syndrome heritability is approximately 60-80%.
-  - The 2019 GWAS (Yu et al.) identified genome-wide significant loci near FLT3 and NTN4.
-  - TS shares genetic overlap with OCD and ADHD.
-  - Histamine (HDC) and dopamine pathways are implicated in tic pathophysiology.
+  - The largest tic-disorder GWAS (TSAICG 2026 preprint, DOI:10.64898/2026.04.09.26350245; 13,247 cases / 536,217 controls)
+    found 6 loci, including PCDH9, HCN1 and a 3p21 locus shared with ADHD/OCD (CELSR3/NCKIPSD). Not yet peer reviewed.
+  - Yu et al. 2019's top locus (FLT3, rs2504235) did not replicate (P=0.016 in the 2026 meta-analysis); Tsetsos et al. 2024
+    (PMID:36738982) added a 5q15 locus near NR2F1.
+  - TS genetic risk is enriched in cortico-striato-thalamo-cortical circuits; TS correlates genetically with OCD (rG 0.41)
+    and ADHD (0.23).
   snps:
   - rsid: rs2060546
     gene: FLT3
@@ -902,15 +1477,19 @@ tourette:
     risk_allele_freq: 0.48
     description: FMS-like tyrosine kinase 3; genome-wide significant in Tourette GWAS.
     source: PMID:30818990
+    unverified: true
+    unverified_reason: labelled chr13 but rsid is on chr12; actually chr12 NTN4 region with EUR freq ~0.03; values do not
+      match Yu 2019
   - rsid: rs2504235
-    gene: NTN4/USP3
-    chromosome: '12'
-    risk_allele: T
-    odds_ratio: 1.12
-    ci_lower: 1.07
-    ci_upper: 1.17
-    risk_allele_freq: 0.5
-    description: Netrin-4 locus; axon guidance, genome-wide significant in combined TS analysis.
+    gene: FLT3
+    chromosome: '13'
+    risk_allele: A
+    odds_ratio: 1.14
+    ci_lower: 1.085
+    ci_upper: 1.198
+    risk_allele_freq: 0.385
+    description: FLT3 locus (13q12.2); top Yu 2019 signal (P=2e-7, CI from P-value) but NOT replicated in the 2026 TSAICG
+      meta-analysis (P=0.016).
     source: PMID:30818990
   - rsid: rs7868992
     gene: CSMD3
@@ -922,6 +1501,9 @@ tourette:
     risk_allele_freq: 0.4
     description: CUB and sushi multiple domains 3; complement regulation in brain, neuropsychiatric risk.
     source: PMID:28560530
+    unverified: true
+    unverified_reason: labelled chr8 but rsid is on chr9; cited PMID is a different paper (Reliability and Validity of the
+      Musculoskeletal Tumor Societ...)
   - rsid: rs13382139
     gene: NRXN1
     chromosome: '2'
@@ -932,6 +1514,9 @@ tourette:
     risk_allele_freq: 0.2
     description: Neurexin 1; synaptic adhesion, shared with ASD and schizophrenia.
     source: PMID:28560530
+    unverified: true
+    unverified_reason: labelled chr2 but rsid is on chr19; cited PMID is a different paper (Reliability and Validity of the
+      Musculoskeletal Tumor Societ...)
   - rsid: rs485513
     gene: SLITRK1
     chromosome: '13'
@@ -942,6 +1527,9 @@ tourette:
     risk_allele_freq: 0.25
     description: SLIT and NTRK-like family member 1; neurite outgrowth, early TS candidate.
     source: PMID:16953002
+    unverified: true
+    unverified_reason: labelled chr13 but rsid is on chr1; risk allele A not an allele of this SNP; cited PMID is a different
+      paper (High levels of dopamine D2 receptors in unaffected members o...)
   - rsid: rs3744161
     gene: HDC
     chromosome: '15'
@@ -952,6 +1540,9 @@ tourette:
     risk_allele_freq: 0.04
     description: Histidine decarboxylase; histamine pathway, rare variant in TS family.
     source: PMID:20479773
+    unverified: true
+    unverified_reason: labelled chr15 but rsid is on chr17; cited PMID is a different paper (Uncovering the roles of rare
+      variants in common disease thro...)
   - rsid: rs4565946
     gene: TPH2
     chromosome: '12'
@@ -962,6 +1553,8 @@ tourette:
     risk_allele_freq: 0.43
     description: Tryptophan hydroxylase 2; serotonin synthesis in brain, tic disorders.
     source: PMID:22180660
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Cytoskeletal defects in Bmpr2-associated pulmonary arterial...)
   - rsid: rs6311
     gene: HTR2A
     chromosome: '13'
@@ -972,16 +1565,95 @@ tourette:
     risk_allele_freq: 0.46
     description: Serotonin receptor 2A; shared susceptibility across tic and OCD spectrum.
     source: PMID:17266101
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Bias between MNI and Talairach coordinates analyzed using th...)
+  - rsid: rs113907874
+    gene: PCDH9
+    chromosome: '13'
+    risk_allele: T
+    odds_ratio: 1.13
+    ci_lower: 1.09
+    ci_upper: 1.18
+    risk_allele_freq: 0.13
+    description: Protocadherin 9 (13q21); top locus in the largest tic-disorder GWAS (P=5.4e-9). Preprint; CI from rounded
+      SE.
+    source: DOI:10.64898/2026.04.09.26350245
+  - rsid: rs78995317
+    gene: UGP2/VPS54
+    chromosome: '2'
+    risk_allele: G
+    odds_ratio: 1.11
+    ci_lower: 1.07
+    ci_upper: 1.16
+    risk_allele_freq: 0.79
+    description: 2p14 LD block (WDPCP, MDH1, UGP2, VPS54, PELI1); genome-wide significant for tic disorders (P=9.4e-9). Preprint.
+    source: DOI:10.64898/2026.04.09.26350245
+  - rsid: rs6768597
+    gene: SGO1-AS1
+    chromosome: '3'
+    risk_allele: T
+    odds_ratio: 1.09
+    ci_lower: 1.05
+    ci_upper: 1.13
+    risk_allele_freq: 0.7
+    description: 3p24 SGO1-AS1 locus, also associated with ADHD and educational attainment; tic-disorder GWAS hit (P=1.7e-8).
+      Preprint.
+    source: DOI:10.64898/2026.04.09.26350245
+  - rsid: rs11720964
+    gene: CELSR3/NCKIPSD
+    chromosome: '3'
+    risk_allele: T
+    odds_ratio: 1.09
+    ci_lower: 1.07
+    ci_upper: 1.11
+    risk_allele_freq: 0.44
+    description: Pleiotropic 3p21 locus (CELSR3, NCKIPSD); shared with ADHD/OCD/MDD; CELSR3 also carries rare TS variants
+      (P=2.2e-8). Preprint.
+    source: DOI:10.64898/2026.04.09.26350245
+  - rsid: rs167184
+    gene: MRPS22/COPB2
+    chromosome: '3'
+    risk_allele: T
+    odds_ratio: 1.1
+    ci_lower: 1.06
+    ci_upper: 1.14
+    risk_allele_freq: 0.26
+    description: 3q23 locus (MRPS22, COPB2, RBP1, RBP2); genome-wide significant for tic disorders (P=2.7e-8). Preprint.
+    source: DOI:10.64898/2026.04.09.26350245
+  - rsid: rs8185387
+    gene: HCN1
+    chromosome: '5'
+    risk_allele: C
+    odds_ratio: 1.12
+    ci_lower: 1.08
+    ci_upper: 1.17
+    risk_allele_freq: 0.28
+    description: Hyperpolarization-activated cation channel HCN1 (5p12); neuronal excitability, tic-disorder GWAS hit (P=4.7e-8).
+      Preprint.
+    source: DOI:10.64898/2026.04.09.26350245
+  - rsid: rs2453763
+    gene: NR2F1-AS1
+    chromosome: '5'
+    risk_allele: A
+    odds_ratio: 1.2
+    ci_lower: 1.13
+    ci_upper: 1.29
+    risk_allele_freq: 0.64
+    description: 5q15 locus near NR2F1; genome-wide significant in TS meta-analysis (6,133 cases). CI back-calculated from
+      P-value.
+    source: PMID:36738982
 bipolar:
   name: Bipolar Disorder
   short_name: BIPOLAR
   prevalence: 0.028
   notes:
   - Bipolar disorder heritability is approximately 60-85%.
-  - Mullins et al. 2021 (PMID:34002096) identified 64 GWS loci in the largest BD GWAS to date (N=41,917 cases, 371,549 controls).
-  - CACNA1C (calcium channel), ANK3 (ankyrin-G), and TRANK1 are the most robust hits.
-  - Significant genetic overlap with schizophrenia, major depression, and ADHD.
-  - Drug targets for antipsychotics, calcium blockers, and antiepileptics were enriched among GWAS signals (Mullins 2021).
+  - O'Connell et al. 2025 (PMID:39843750; PGC BD4, 158,036 cases / ~2.8M controls, multi-ancestry) identified 298 genome-wide
+    significant loci (229 in Europeans), a 4-fold increase over Mullins 2021; per-locus ORs are mostly 1.03-1.06.
+  - Fine-mapping implicates 36 credible genes (e.g. CACNA1C, FURIN, BCL11B); risk is enriched in GABAergic interneurons and
+    striatal medium spiny neurons.
+  - Earlier candidate-gene and small-GWAS effect sizes (e.g. CACNA1C OR ~1.18) were inflated; PGC4 estimates are ~1.03.
+  - Strong genetic overlap with schizophrenia (rG 0.68), plus OCD (0.33) and ADHD (0.22) (Grotzinger 2026).
   snps:
   - rsid: rs4765913
     gene: CACNA1C
@@ -994,6 +1666,8 @@ bipolar:
     description: L-type calcium channel alpha-1C subunit; one of the strongest and most-replicated bipolar hits. Also associated
       with schizophrenia and depression.
     source: PMID:31043756
+    unverified: true
+    unverified_reason: OR inflated (~1.03 in PGC4); superseded by rs4298967
   - rsid: rs1006737
     gene: CACNA1C
     chromosome: '12'
@@ -1004,6 +1678,8 @@ bipolar:
     risk_allele_freq: 0.33
     description: CACNA1C intronic variant; neuronal calcium signaling, mood regulation.
     source: PMID:31043756
+    unverified: true
+    unverified_reason: OR inflated (~1.03 in PGC4); superseded by rs4298967
   - rsid: rs10994397
     gene: ANK3
     chromosome: '10'
@@ -1014,6 +1690,8 @@ bipolar:
     risk_allele_freq: 0.08
     description: Ankyrin-G; critical for axon initial segment and node of Ranvier assembly.
     source: PMID:31043756
+    unverified: true
+    unverified_reason: OR inflated (~1.04 in PGC4); superseded by rs2154393
   - rsid: rs9804190
     gene: ANK3
     chromosome: '10'
@@ -1034,6 +1712,8 @@ bipolar:
     risk_allele_freq: 0.6
     description: Major histocompatibility complex region; immune-brain axis in mood disorders.
     source: PMID:31043756
+    unverified: true
+    unverified_reason: labelled chr6 but rsid is on chr17; risk allele C not an allele of this SNP
   - rsid: rs174576
     gene: FADS2
     chromosome: '11'
@@ -1054,6 +1734,8 @@ bipolar:
     risk_allele_freq: 0.49
     description: Val158Met; dopamine metabolism in prefrontal cortex, shared across conditions.
     source: PMID:18414213
+    unverified: true
+    unverified_reason: cited PMID is a different paper (ACMG recommendations for standards for interpretation and re...)
   - rsid: rs6265
     gene: BDNF
     chromosome: '11'
@@ -1064,16 +1746,20 @@ bipolar:
     risk_allele_freq: 0.2
     description: Val66Met; BDNF secretion and neural plasticity, mood disorder susceptibility.
     source: PMID:24002750
+    unverified: true
+    unverified_reason: cited PMID is a different paper (A family 3 glycosyl hydrolase of Dickeya dadantii 3937 is in...)
   - rsid: rs1801133
     gene: MTHFR
     chromosome: '1'
-    risk_allele: T
+    risk_allele: A
     odds_ratio: 1.16
     ci_lower: 1.07
     ci_upper: 1.26
     risk_allele_freq: 0.33
     description: Methylenetetrahydrofolate reductase C677T; folate metabolism, epigenetic regulation.
     source: PMID:26268241
+    unverified: true
+    unverified_reason: cited PMID is a different paper (IDH2R172 mutations define a unique subgroup of patients with...)
   - rsid: rs12576775
     gene: ODZ4 (TENM4)
     chromosome: '11'
@@ -1084,16 +1770,18 @@ bipolar:
     risk_allele_freq: 0.15
     description: Teneurin-4; axon guidance and neural connectivity, genome-wide significant for bipolar.
     source: PMID:31043756
+    unverified: true
+    unverified_reason: not significant in PGC4 bipolar GWAS (P=0.10)
   - rsid: rs9834970
-    gene: NCAN/HAPLN4
-    chromosome: '19'
-    risk_allele: T
-    odds_ratio: 1.11
-    ci_lower: 1.07
-    ci_upper: 1.15
-    risk_allele_freq: 0.37
-    description: Neurocan/hyaluronan and proteoglycan link protein 4; extracellular matrix, replicated.
-    source: PMID:34002096
+    gene: TRANK1
+    chromosome: '3'
+    risk_allele: C
+    odds_ratio: 1.033
+    ci_lower: 1.024
+    ci_upper: 1.042
+    risk_allele_freq: 0.49
+    description: TRANK1 locus (3p22.2); one of the most replicated bipolar loci (PGC4 P=1.6e-13).
+    source: PMID:39843750
   - rsid: rs884301
     gene: TRANK1
     chromosome: '3'
@@ -1104,6 +1792,8 @@ bipolar:
     risk_allele_freq: 0.68
     description: Tetratricopeptide repeat and ankyrin repeat containing 1; strongest new BD locus.
     source: PMID:34002096
+    unverified: true
+    unverified_reason: labelled chr3 but rsid is on chr17
   - rsid: rs57195239
     gene: POU3F2
     chromosome: '6'
@@ -1114,6 +1804,8 @@ bipolar:
     risk_allele_freq: 0.48
     description: POU class 3 homeobox 2; neural transcription factor, brain development.
     source: PMID:34002096
+    unverified: true
+    unverified_reason: labelled chr6 but rsid is on chr2; risk allele C not an allele of this SNP
   - rsid: rs2055934
     gene: SHANK2
     chromosome: '11'
@@ -1124,6 +1816,8 @@ bipolar:
     risk_allele_freq: 0.4
     description: SH3 and ankyrin repeat domains 2; postsynaptic scaffolding, shared with ASD.
     source: PMID:34002096
+    unverified: true
+    unverified_reason: labelled chr11 but rsid is on chr4
   - rsid: rs4075511
     gene: FADS1
     chromosome: '11'
@@ -1134,17 +1828,160 @@ bipolar:
     risk_allele_freq: 0.58
     description: Fatty acid desaturase 1; lipid metabolism, brain membrane composition.
     source: PMID:34002096
+    unverified: true
+    unverified_reason: labelled chr11 but rsid is on chr2
+  - rsid: rs1487445
+    gene: MIR2113/POU3F2 (6q16.1)
+    chromosome: '6'
+    risk_allele: T
+    odds_ratio: 1.044
+    ci_lower: 1.035
+    ci_upper: 1.053
+    risk_allele_freq: 0.48
+    description: Second-strongest European BD locus in PGC4 (P=1.6e-22); region also linked to educational attainment.
+    source: PMID:39843750
+  - rsid: rs17601612
+    gene: DRD2
+    chromosome: '11'
+    risk_allele: G
+    odds_ratio: 1.043
+    ci_lower: 1.034
+    ci_upper: 1.053
+    risk_allele_freq: 0.61
+    description: Intronic in the dopamine D2 receptor gene (P=1.7e-19), the main target of antipsychotics.
+    source: PMID:39843750
+  - rsid: rs4702
+    gene: FURIN
+    chromosome: '15'
+    risk_allele: G
+    odds_ratio: 1.038
+    ci_lower: 1.029
+    ci_upper: 1.047
+    risk_allele_freq: 0.45
+    description: FURIN 3'UTR variant (P=7.6e-17); fine-mapped credible SNP, shared with schizophrenia and OCD.
+    source: PMID:39843750
+  - rsid: rs17410557
+    gene: DCC
+    chromosome: '18'
+    risk_allele: C
+    odds_ratio: 1.037
+    ci_lower: 1.028
+    ci_upper: 1.047
+    risk_allele_freq: 0.39
+    description: Netrin-1 receptor DCC (P=2.3e-16); axon guidance gene shared across psychiatric disorders.
+    source: PMID:39843750
+  - rsid: rs1233396
+    gene: MHC region (GABBR1)
+    chromosome: '6'
+    risk_allele: G
+    odds_ratio: 1.061
+    ci_lower: 1.046
+    ci_upper: 1.076
+    risk_allele_freq: 0.88
+    description: MHC-region signal within GABBR1 (GABA-B receptor subunit), P=2.8e-16.
+    source: PMID:39843750
+  - rsid: rs13404366
+    gene: RFTN2
+    chromosome: '2'
+    risk_allele: A
+    odds_ratio: 1.038
+    ci_lower: 1.029
+    ci_upper: 1.048
+    risk_allele_freq: 0.33
+    description: 2q33.1 locus in RFTN2, near PLCL1/MARS2 (P=1.5e-15).
+    source: PMID:39843750
+  - rsid: rs13300856
+    gene: OLFM1
+    chromosome: '9'
+    risk_allele: G
+    odds_ratio: 1.051
+    ci_lower: 1.038
+    ci_upper: 1.064
+    risk_allele_freq: 0.15
+    description: Upstream of olfactomedin-1, a neuronal/synaptic glycoprotein (P=2.2e-15).
+    source: PMID:39843750
+  - rsid: rs2693698
+    gene: BCL11B
+    chromosome: '14'
+    risk_allele: G
+    odds_ratio: 1.033
+    ci_lower: 1.025
+    ci_upper: 1.042
+    risk_allele_freq: 0.54
+    description: Intronic in BCL11B (CTIP2), cortical/striatal neuron transcription factor (P=7.0e-14); fine-mapped credible
+      SNP.
+    source: PMID:39843750
+  - rsid: rs6911230
+    gene: ESR1
+    chromosome: '6'
+    risk_allele: A
+    odds_ratio: 1.033
+    ci_lower: 1.024
+    ci_upper: 1.043
+    risk_allele_freq: 0.34
+    description: Intronic in estrogen receptor alpha (P=1.4e-12); ESR1 is also an OCD GWAS locus.
+    source: PMID:39843750
+  - rsid: rs6125656
+    gene: KCNB1
+    chromosome: '20'
+    risk_allele: A
+    odds_ratio: 1.041
+    ci_lower: 1.029
+    ci_upper: 1.053
+    risk_allele_freq: 0.18
+    description: Intronic in KCNB1 (Kv2.1 potassium channel), P=2.7e-12.
+    source: PMID:39843750
+  - rsid: rs13227429
+    gene: BRAF
+    chromosome: '7'
+    risk_allele: C
+    odds_ratio: 1.033
+    ci_lower: 1.024
+    ci_upper: 1.043
+    risk_allele_freq: 0.55
+    description: Intronic in BRAF (MAPK signaling), P=3.2e-12.
+    source: PMID:39843750
+  - rsid: rs4298967
+    gene: CACNA1C
+    chromosome: '12'
+    risk_allele: A
+    odds_ratio: 1.033
+    ci_lower: 1.024
+    ci_upper: 1.043
+    risk_allele_freq: 0.34
+    description: Fine-mapped credible SNP at CACNA1C (L-type calcium channel), P=1.3e-12 in PGC4.
+    source: PMID:39843750
+  - rsid: rs2154393
+    gene: ANK3
+    chromosome: '10'
+    risk_allele: T
+    odds_ratio: 1.049
+    ci_lower: 1.033
+    ci_upper: 1.066
+    risk_allele_freq: 0.078
+    description: PGC4 lead SNP at ANK3 (ankyrin-G), P=1.3e-9.
+    source: PMID:39843750
+  - rsid: rs7117514
+    gene: SHANK2
+    chromosome: '11'
+    risk_allele: G
+    odds_ratio: 1.031
+    ci_lower: 1.022
+    ci_upper: 1.04
+    risk_allele_freq: 0.5
+    description: PGC4 lead SNP in the SHANK2 region (P=2.8e-12).
+    source: PMID:39843750
 scz:
   name: Schizophrenia (Neurodevelopmental Overlap)
   short_name: SCZ
   prevalence: 0.01
   notes:
   - Schizophrenia heritability is approximately 60-80%.
-  - Trubetskoy et al. 2022 (PMID:35396580, PGC3) identified 270+ GWS loci in 76,755 cases and 243,649 controls — the largest
-    SCZ GWAS to date.
-  - The MHC/C4 locus (complement-mediated synaptic pruning) is the strongest signal.
-  - DRD2 (dopamine D2 receptor) reached GWS, validating the dopamine hypothesis and confirming antipsychotic drug targets.
-  - Substantial genetic overlap with bipolar disorder, ASD, and ADHD.
+  - Trubetskoy et al. 2022 (PMID:35396580, PGC3; 76,755 cases / 243,649 controls) reported 287 loci and remains the latest
+    European-focused discovery GWAS.
+  - 'Multi-ancestry follow-ups: Dang et al. 2025 (PMID:39753749) found 61 new loci; a PGC4 paper has not yet been published.'
+  - The extended MHC region is the strongest signal; candidate-gene SNPs (COMT, BDNF, DRD4, MTHFR, DISC1, NRG1, ERBB4) are
+    not supported by large GWAS (Johnson et al. 2017, PMID:28823710).
   - Most schizophrenia risk is from common variants of small effect, but rare CNVs (22q11.2, 1q21.1, 15q13.3) are also major
     risk factors.
   snps:
@@ -1157,7 +1994,7 @@ scz:
     ci_upper: 1.16
     risk_allele_freq: 0.8
     description: MicroRNA-137 host gene; regulates neuronal maturation, top schizophrenia GWAS hit.
-    source: PMID:25056061
+    source: PMID:21926974
   - rsid: rs1006737
     gene: CACNA1C
     chromosome: '12'
@@ -1168,6 +2005,8 @@ scz:
     risk_allele_freq: 0.33
     description: L-type calcium channel; shared with bipolar disorder, neuronal excitability.
     source: PMID:25056061
+    unverified: true
+    unverified_reason: OR inflated (~1.03 in PGC4); superseded by rs4298967
   - rsid: rs6904071
     gene: C4A/C4B
     chromosome: '6'
@@ -1178,6 +2017,9 @@ scz:
     risk_allele_freq: 0.58
     description: Complement component 4; synaptic pruning, strongest schizophrenia hit in MHC.
     source: PMID:27991903
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Structural basis for targeted DNA cytosine deamination and m...);
+      at chr6:27.1Mb histone cluster, not the C4 locus
   - rsid: rs2007044
     gene: GRIN2A
     chromosome: '16'
@@ -1188,6 +2030,8 @@ scz:
     risk_allele_freq: 0.62
     description: NMDA receptor subunit 2A; glutamate neurotransmission, synaptic plasticity.
     source: PMID:25056061
+    unverified: true
+    unverified_reason: labelled chr16 but rsid is on chr12
   - rsid: rs1344706
     gene: ZNF804A
     chromosome: '2'
@@ -1208,6 +2052,8 @@ scz:
     risk_allele_freq: 0.2
     description: Val66Met; neural plasticity, shared across neurodevelopmental conditions.
     source: PMID:24002750
+    unverified: true
+    unverified_reason: cited PMID is a different paper (A family 3 glycosyl hydrolase of Dickeya dadantii 3937 is in...)
   - rsid: rs4680
     gene: COMT
     chromosome: '22'
@@ -1218,6 +2064,8 @@ scz:
     risk_allele_freq: 0.49
     description: Val158Met; prefrontal dopamine metabolism, cognitive function.
     source: PMID:18414213
+    unverified: true
+    unverified_reason: cited PMID is a different paper (ACMG recommendations for standards for interpretation and re...)
   - rsid: rs6994992
     gene: NRG1
     chromosome: '8'
@@ -1238,16 +2086,20 @@ scz:
     risk_allele_freq: 0.4
     description: Dopamine receptor D4; dopamine hypothesis of schizophrenia.
     source: PMID:11244486
+    unverified: true
+    unverified_reason: cited PMID is a different paper (No association or linkage between polymorphisms in the genes...)
   - rsid: rs1801133
     gene: MTHFR
     chromosome: '1'
-    risk_allele: T
+    risk_allele: A
     odds_ratio: 1.16
     ci_lower: 1.07
     ci_upper: 1.26
     risk_allele_freq: 0.33
     description: C677T; folate metabolism, one-carbon pathway, epigenetic risk factor.
     source: PMID:26268241
+    unverified: true
+    unverified_reason: cited PMID is a different paper (IDH2R172 mutations define a unique subgroup of patients with...)
   - rsid: rs821616
     gene: DISC1
     chromosome: '1'
@@ -1258,6 +2110,8 @@ scz:
     risk_allele_freq: 0.25
     description: Disrupted in schizophrenia 1; neuronal migration, cAMP signaling.
     source: PMID:11418864
+    unverified: true
+    unverified_reason: cited PMID is a different paper (ATR/ATM-mediated phosphorylation of human Rad17 is required...)
   - rsid: rs3924999
     gene: ERBB4
     chromosome: '2'
@@ -1268,6 +2122,8 @@ scz:
     risk_allele_freq: 0.45
     description: ErbB4 receptor; NRG1 signaling partner, GABAergic interneuron development.
     source: PMID:25056061
+    unverified: true
+    unverified_reason: labelled chr2 but rsid is on chr8
   - rsid: rs2514218
     gene: DRD2
     chromosome: '11'
@@ -1278,6 +2134,8 @@ scz:
     risk_allele_freq: 0.38
     description: Dopamine D2 receptor locus; GWS in PGC3, target of antipsychotics.
     source: PMID:35396580
+    unverified: true
+    unverified_reason: PGC2 (not PGC3) SNP; risk allele is C at freq ~0.66, not T at 0.38
   - rsid: rs11191419
     gene: AS3MT/BORCS7
     chromosome: '10'
@@ -1288,6 +2146,8 @@ scz:
     risk_allele_freq: 0.18
     description: 10q24.32 locus; arsenic methyltransferase region, robust SCZ signal.
     source: PMID:35396580
+    unverified: true
+    unverified_reason: PGC2 (not PGC3) SNP; published OR ~1.10 and freq 0.64, not 1.14 / 0.18
   - rsid: rs2851447
     gene: TRIM26
     chromosome: '6'
@@ -1298,6 +2158,8 @@ scz:
     risk_allele_freq: 0.45
     description: MHC class I region; tripartite motif containing 26, immune-brain axis.
     source: PMID:35396580
+    unverified: true
+    unverified_reason: labelled chr6 but rsid is on chr12
   - rsid: rs2905426
     gene: FURIN
     chromosome: '15'
@@ -1308,6 +2170,8 @@ scz:
     risk_allele_freq: 0.5
     description: Furin convertase; proprotein processing, druggable SCZ target (PGC3).
     source: PMID:35396580
+    unverified: true
+    unverified_reason: labelled chr15 but rsid is on chr19; risk allele C not an allele of this SNP
   - rsid: rs11682175
     gene: TCF4
     chromosome: '18'
@@ -1318,6 +2182,8 @@ scz:
     risk_allele_freq: 0.42
     description: Transcription factor 4; E-box binding, neuronal differentiation, replicated SCZ locus.
     source: PMID:35396580
+    unverified: true
+    unverified_reason: labelled chr18 but rsid is on chr2
   - rsid: rs56205728
     gene: GRIA1
     chromosome: '5'
@@ -1328,20 +2194,131 @@ scz:
     risk_allele_freq: 0.37
     description: AMPA receptor subunit 1; glutamatergic transmission, GWS in PGC3.
     source: PMID:35396580
+    unverified: true
+    unverified_reason: labelled chr5 but rsid is on chr15
+  - rsid: rs140365013
+    gene: MHC (extended
+    6p22.1): null
+    chromosome: '6'
+    risk_allele: G
+    odds_ratio: 1.228
+    ci_lower: 1.2
+    ci_upper: 1.26
+    risk_allele_freq: 0.91
+    description: Top PGC3 signal (P=7e-41) in the extended MHC/histone cluster region; immune-related locus.
+    source: PMID:35396580
+  - rsid: rs13107325
+    gene: SLC39A8
+    chromosome: '4'
+    risk_allele: T
+    odds_ratio: 1.175
+    ci_lower: 1.136
+    ci_upper: 1.22
+    risk_allele_freq: 0.07
+    description: ZIP8 manganese/zinc transporter missense (Ala391Thr); strong PGC3 hit, T allele also lowers cognitive scores.
+    source: PMID:35396580
+  - rsid: rs58120505
+    gene: MAD1L1
+    chromosome: '7'
+    risk_allele: T
+    odds_ratio: 1.085
+    ci_lower: 1.07
+    ci_upper: 1.1
+    risk_allele_freq: 0.59
+    description: Mitotic checkpoint gene locus; among the strongest PGC3 signals, shared with bipolar disorder.
+    source: PMID:35396580
+  - rsid: rs4702
+    gene: FURIN
+    chromosome: '15'
+    risk_allele: G
+    odds_ratio: 1.083
+    ci_lower: 1.07
+    ci_upper: 1.1
+    risk_allele_freq: 0.45
+    description: FURIN 3'UTR variant; PGC3 lead at 15q26.1, shared with bipolar disorder and OCD.
+    source: PMID:35396580
+  - rsid: rs2139054
+    gene: VRK2
+    chromosome: '2'
+    risk_allele: C
+    odds_ratio: 1.073
+    ci_lower: 1.053
+    ci_upper: 1.087
+    risk_allele_freq: 0.6
+    description: Vaccinia-related kinase 2 locus; replicated SCZ locus at 2p16.1.
+    source: PMID:35396580
+  - rsid: rs2710323
+    gene: ITIH1/NEK4
+    chromosome: '3'
+    risk_allele: T
+    odds_ratio: 1.071
+    ci_lower: 1.06
+    ci_upper: 1.08
+    risk_allele_freq: 0.52
+    description: 3p21.1 locus shared across SCZ, bipolar disorder and depression.
+    source: PMID:35396580
+  - rsid: rs4129585
+    gene: TSNARE1
+    chromosome: '8'
+    risk_allele: A
+    odds_ratio: 1.071
+    ci_lower: 1.06
+    ci_upper: 1.09
+    risk_allele_freq: 0.44
+    description: t-SNARE domain gene; vesicle trafficking, replicated SCZ locus.
+    source: PMID:35396580
+  - rsid: rs35274762
+    gene: GRM3
+    chromosome: '7'
+    risk_allele: T
+    odds_ratio: 1.104
+    ci_lower: 1.08
+    ci_upper: 1.13
+    risk_allele_freq: 0.87
+    description: Metabotropic glutamate receptor 3; glutamate hypothesis and drug-target locus.
+    source: PMID:35396580
+  - rsid: rs7893279
+    gene: CACNB2
+    chromosome: '10'
+    risk_allele: T
+    odds_ratio: 1.109
+    ci_lower: 1.08
+    ci_upper: 1.13
+    risk_allele_freq: 0.89
+    description: Voltage-gated calcium channel beta-2 subunit; cross-disorder psychiatric locus.
+    source: PMID:35396580
+  - rsid: rs732381
+    gene: CACNA1I
+    chromosome: '22'
+    risk_allele: T
+    odds_ratio: 1.07
+    ci_lower: 1.053
+    ci_upper: 1.087
+    risk_allele_freq: 0.3
+    description: T-type calcium channel Cav3.3; thalamic reticular neuron rhythm, sleep-spindle biology.
+    source: PMID:35396580
+  - rsid: rs3813567
+    gene: CHRNA5/CHRNA3/CHRNB4
+    chromosome: '15'
+    risk_allele: A
+    odds_ratio: 1.075
+    ci_lower: 1.053
+    ci_upper: 1.099
+    risk_allele_freq: 0.8
+    description: Nicotinic acetylcholine receptor cluster (15q25); also linked to smoking behaviour.
+    source: PMID:35396580
 gifted:
   name: Cognitive Ability / Giftedness
   short_name: GIFTED
   prevalence: 0.02
   notes:
-  - These SNPs are associated with HIGHER cognitive ability (positive trait alleles).
-  - Intelligence is ~50-80% heritable, with thousands of variants each of tiny effect.
-  - Savage et al. 2018 (PMID:29942086, N=269,867) identified 205 GWS loci; Hill et al. 2019 (PMID:30038396, N=248,482) added
-    further loci.
-  - Giftedness (IQ>130) involves ~2% of population; profound giftedness (IQ>145) ~0.1%.
+  - These SNPs are associated with HIGHER cognitive ability (trait-increasing alleles).
+  - Intelligence is ~50-80% heritable, with thousands of variants each of tiny effect (<0.05 SD per allele).
+  - 'van den Berg et al. 2026 (PMID:42834203; N=455,402, measured + imputed UK Biobank fluid intelligence) found 550 independent
+    GWS SNPs — the largest intelligence GWAS to date. Earlier: Savage et al. 2018 (PMID:29942086), Sniekers 2017 (PMID:28530673).'
+  - ORs for this quantitative trait are approximate conversions from per-allele SD effects (lnOR = beta*pi/sqrt(3)).
   - Cognitive ability is strongly influenced by education, environment, nutrition, and socioeconomic factors — genetics is
     not destiny.
-  - Lam et al. 2022 (PMID:35361942) extended intelligence GWAS to multi-ancestry populations, confirming many loci.
-  - Memory-related variants (KIBRA, BDNF Val66) have robust replications for episodic memory performance.
   snps:
   - rsid: rs2490272
     gene: FOXO3
@@ -1353,6 +2330,8 @@ gifted:
     risk_allele_freq: 0.62
     description: Forkhead box O3; longevity gene, neuroprotection, associated with higher IQ.
     source: PMID:29942086
+    unverified: true
+    unverified_reason: trait-raising allele is T in Sniekers 2017 and van den Berg 2026, not A
   - rsid: rs1906252
     gene: CSE1L
     chromosome: '20'
@@ -1363,6 +2342,8 @@ gifted:
     risk_allele_freq: 0.55
     description: Chromosome segregation 1-like; cell division, genome-wide significant for intelligence.
     source: PMID:29942086
+    unverified: true
+    unverified_reason: labelled chr20 but rsid is on chr6
   - rsid: rs2154481
     gene: LINC00461
     chromosome: '5'
@@ -1373,6 +2354,8 @@ gifted:
     risk_allele_freq: 0.47
     description: Long non-coding RNA near MEF2C; neuronal differentiation and synaptic plasticity.
     source: PMID:29942086
+    unverified: true
+    unverified_reason: labelled chr5 but rsid is on chr21
   - rsid: rs11138902
     gene: NEGR1
     chromosome: '1'
@@ -1383,6 +2366,8 @@ gifted:
     risk_allele_freq: 0.58
     description: Neuronal growth regulator 1; neurite outgrowth, replicated intelligence locus.
     source: PMID:29942086
+    unverified: true
+    unverified_reason: labelled chr1 but rsid is on chr9; risk allele C not an allele of this SNP
   - rsid: rs11712056
     gene: SKAP1
     chromosome: '17'
@@ -1393,6 +2378,8 @@ gifted:
     risk_allele_freq: 0.42
     description: Src kinase-associated phosphoprotein 1; immune-neural signaling, intelligence GWAS hit.
     source: PMID:29942086
+    unverified: true
+    unverified_reason: labelled chr17 but rsid is on chr3
   - rsid: rs2947349
     gene: SHANK3 region
     chromosome: '22'
@@ -1403,6 +2390,8 @@ gifted:
     risk_allele_freq: 0.38
     description: Near SHANK3; post-synaptic scaffolding, synaptic strength (distinct from ASD rare variants).
     source: PMID:28530673
+    unverified: true
+    unverified_reason: labelled chr22 but rsid is on chr2
   - rsid: rs11584700
     gene: BSN
     chromosome: '3'
@@ -1413,6 +2402,8 @@ gifted:
     risk_allele_freq: 0.52
     description: Bassoon; presynaptic cytomatrix protein, neurotransmitter release.
     source: PMID:28530673
+    unverified: true
+    unverified_reason: labelled chr3 but rsid is on chr1; risk allele C not an allele of this SNP
   - rsid: rs4728302
     gene: DCC
     chromosome: '18'
@@ -1423,6 +2414,8 @@ gifted:
     risk_allele_freq: 0.65
     description: DCC netrin receptor; axon guidance, cortical development, intelligence association.
     source: PMID:30038396
+    unverified: true
+    unverified_reason: labelled chr18 but rsid is on chr7
   - rsid: rs41352752
     gene: NRXN3
     chromosome: '14'
@@ -1433,6 +2426,8 @@ gifted:
     risk_allele_freq: 0.3
     description: Neurexin 3; synaptic cell adhesion, neurotransmission.
     source: PMID:30038396
+    unverified: true
+    unverified_reason: labelled chr14 but rsid is on chr5
   - rsid: rs4680
     gene: COMT
     chromosome: '22'
@@ -1444,6 +2439,9 @@ gifted:
     description: Val158Met; Val allele (G) = faster dopamine clearance, associated with better cognitive flexibility and working
       memory in some contexts.
     source: PMID:18414213
+    unverified: true
+    unverified_reason: 'cited PMID is a different paper (ACMG recommendations for standards for interpretation and re...);
+      van den Berg 2026 (N=455k): Met (A) allele goes with HIGHER intelligence, not GWS'
   - rsid: rs6265
     gene: BDNF
     chromosome: '11'
@@ -1454,6 +2452,8 @@ gifted:
     risk_allele_freq: 0.8
     description: Val66Met; Val allele (C) = normal BDNF secretion, better hippocampal function and episodic memory.
     source: PMID:24002750
+    unverified: true
+    unverified_reason: cited PMID is a different paper (A family 3 glycosyl hydrolase of Dickeya dadantii 3937 is in...)
   - rsid: rs363050
     gene: SNAP25
     chromosome: '20'
@@ -1464,6 +2464,8 @@ gifted:
     risk_allele_freq: 0.4
     description: Synaptosomal-associated protein 25; synaptic vesicle fusion, IQ association in multiple studies.
     source: PMID:16505834
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Evalution of the castrated male Sprague-Dawley rat as a mode...)
   - rsid: rs10119
     gene: HMGA2
     chromosome: '12'
@@ -1474,6 +2476,9 @@ gifted:
     risk_allele_freq: 0.49
     description: High mobility group AT-hook 2; brain volume and intracranial volume association.
     source: PMID:22504419
+    unverified: true
+    unverified_reason: labelled chr12 but rsid is on chr19; risk allele T not an allele of this SNP; cited PMID is a different
+      paper (Common variants at 12q15 and 12q24 are associated with infan...)
   - rsid: rs236330
     gene: KIBRA (WWC1)
     chromosome: '5'
@@ -1484,6 +2489,9 @@ gifted:
     risk_allele_freq: 0.46
     description: WW and C2 domain-containing 1; episodic memory, hippocampal function.
     source: PMID:16906133
+    unverified: true
+    unverified_reason: labelled chr5 but rsid is on chr1; cited PMID is a different paper (Autophosphorylation at serine 1987
+      is dispensable for murine...)
   - rsid: rs17070145
     gene: KIBRA (WWC1)
     chromosome: '5'
@@ -1494,6 +2502,8 @@ gifted:
     risk_allele_freq: 0.25
     description: KIBRA T-allele carriers show better episodic memory performance across studies.
     source: PMID:16906133
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Autophosphorylation at serine 1987 is dispensable for murine...)
   - rsid: rs1800497
     gene: ANKK1/DRD2
     chromosome: '11'
@@ -1504,6 +2514,8 @@ gifted:
     risk_allele_freq: 0.8
     description: Taq1A; G allele = higher D2 receptor density, better reward learning, cognitive flexibility.
     source: PMID:20732625
+    unverified: true
+    unverified_reason: cited Neale 2010 ADHD GWAS meta-analysis found no significant loci; OR source unclear
   - rsid: rs2268894
     gene: CYP2D6 region
     chromosome: '22'
@@ -1514,6 +2526,8 @@ gifted:
     risk_allele_freq: 0.55
     description: Near CYP2D6; metabolism region, GWS for intelligence (Hill 2019).
     source: PMID:30038396
+    unverified: true
+    unverified_reason: labelled chr22 but rsid is on chr2
   - rsid: rs2964197
     gene: LRRN2
     chromosome: '1'
@@ -1524,6 +2538,8 @@ gifted:
     risk_allele_freq: 0.48
     description: Leucine-rich repeat neuronal 2; neuronal cell adhesion, intelligence GWAS.
     source: PMID:30038396
+    unverified: true
+    unverified_reason: labelled chr1 but rsid is on chr5
   - rsid: rs2158904
     gene: CADM2
     chromosome: '3'
@@ -1534,21 +2550,134 @@ gifted:
     risk_allele_freq: 0.4
     description: Cell adhesion molecule 2; synaptic adhesion, replicated across ancestries.
     source: PMID:35361942
+    unverified: true
+    unverified_reason: labelled chr3 but rsid is on chr11; risk allele G not an allele of this SNP; cited PMID is a different
+      paper (Global cities are sinking - and humans are partly to blame....)
+  - rsid: rs13107325
+    gene: SLC39A8
+    chromosome: '4'
+    risk_allele: C
+    odds_ratio: 1.09
+    ci_lower: 1.076
+    ci_upper: 1.105
+    risk_allele_freq: 0.93
+    description: ZIP8 missense; C (Ala391) allele associated with higher fluid intelligence (P=4.5e-36); T allele raises SCZ
+      risk.
+    source: PMID:42834203
+  - rsid: rs34316
+    gene: MEF2C
+    chromosome: '5'
+    risk_allele: A
+    odds_ratio: 1.045
+    ci_lower: 1.037
+    ci_upper: 1.052
+    risk_allele_freq: 0.43
+    description: Myocyte enhancer factor 2C; synaptic gene regulation, among the strongest intelligence loci (P=2.3e-32).
+    source: PMID:42834203
+  - rsid: rs11191116
+    gene: OGA/NT5C2 region
+    chromosome: '10'
+    risk_allele: C
+    odds_ratio: 1.046
+    ci_lower: 1.038
+    ci_upper: 1.054
+    risk_allele_freq: 0.65
+    description: 10q24.32 locus (O-GlcNAcase); pleiotropic with schizophrenia, P=2.8e-30 for fluid intelligence.
+    source: PMID:42834203
+  - rsid: rs2647239
+    gene: TET2 region
+    chromosome: '4'
+    risk_allele: A
+    odds_ratio: 1.042
+    ci_lower: 1.035
+    ci_upper: 1.05
+    risk_allele_freq: 0.59
+    description: Near TET2 DNA demethylase; replicated intelligence locus (P=5.1e-29).
+    source: PMID:42834203
+  - rsid: rs7467480
+    gene: Intergenic (9p21.3)
+    chromosome: '9'
+    risk_allele: A
+    odds_ratio: 1.041
+    ci_lower: 1.034
+    ci_upper: 1.049
+    risk_allele_freq: 0.4
+    description: Intergenic 9p21.3 locus; also the top hit in the 2026 crystallized-knowledge GWAS (P=2.7e-28).
+    source: PMID:42834203
+  - rsid: rs12928404
+    gene: ATXN2L/SH2B1
+    chromosome: '16'
+    risk_allele: T
+    odds_ratio: 1.041
+    ci_lower: 1.033
+    ci_upper: 1.048
+    risk_allele_freq: 0.6
+    description: 16p11.2 locus; SH2B1 tunes hippocampal ERK signalling and fluid intelligence (P=3.3e-27).
+    source: PMID:42834203
+  - rsid: rs72801817
+    gene: RBL2
+    chromosome: '16'
+    risk_allele: T
+    odds_ratio: 1.041
+    ci_lower: 1.033
+    ci_upper: 1.049
+    risk_allele_freq: 0.31
+    description: Retinoblastoma-like 2 (cell-cycle/neurogenesis); also a rare-variant neurodevelopmental gene (P=1.7e-24).
+    source: PMID:42834203
+  - rsid: rs10189857
+    gene: BCL11A
+    chromosome: '2'
+    risk_allele: A
+    odds_ratio: 1.037
+    ci_lower: 1.03
+    ci_upper: 1.045
+    risk_allele_freq: 0.57
+    description: BCL11A transcription factor (cortical neuron development, NDD gene); P=3.1e-23.
+    source: PMID:42834203
+  - rsid: rs2426132
+    gene: CSE1L/STAU1
+    chromosome: '20'
+    risk_allele: C
+    odds_ratio: 1.038
+    ci_lower: 1.031
+    ci_upper: 1.046
+    risk_allele_freq: 0.45
+    description: 20q13.13 locus near CSE1L and STAU1 (dendritic mRNA transport); P=4.9e-25.
+    source: PMID:42834203
+  - rsid: rs2999987
+    gene: NEGR1 (upstream)
+    chromosome: '1'
+    risk_allele: T
+    odds_ratio: 1.041
+    ci_lower: 1.032
+    ci_upper: 1.051
+    risk_allele_freq: 0.8
+    description: 1p31.1 NEGR1 region; neuronal growth regulator, replicated cognition/EA locus (P=2.8e-19).
+    source: PMID:42834203
+  - rsid: rs11662271
+    gene: DCC
+    chromosome: '18'
+    risk_allele: T
+    odds_ratio: 1.033
+    ci_lower: 1.025
+    ci_upper: 1.04
+    risk_allele_freq: 0.46
+    description: DCC netrin-1 receptor; axon guidance, intronic lead SNP (P=9.1e-19).
+    source: PMID:42834203
 sps:
   name: Sensory Processing Sensitivity / Overexcitability
   short_name: SPS/OE
   prevalence: 0.2
   notes:
-  - Sensory Processing Sensitivity (SPS / HSP) is a TEMPERAMENT TRAIT, not a disorder.
-  - This panel now includes BOTH neurochemical markers AND non-pathological trait markers from personality/temperament GWAS
-    in healthy populations.
-  - 'Trait sources: Neuroticism (Nagel 2018, emotional sensitivity), Empathy (Warrier 2018), Openness (Lo 2017, aesthetic
-    sensitivity), Environmental Sensitivity (Assary 2021, direct HSP measure).'
-  - 'Relates to Dabrowski''s overexcitabilities: emotional, sensual, intellectual, imaginational.'
-  - SPS heritability is estimated at 40-60% (Assary et al. 2021, PMID:33100958).
-  - 'SPS is a ''differential susceptibility'' trait: greater sensitivity to BOTH negative AND positive environments (vantage
-    sensitivity).'
-  - Higher trait allele count = greater depth of processing, NOT pathology.
+  - Sensory Processing Sensitivity (SPS / HSP) is a TEMPERAMENT TRAIT, not a disorder. No GWAS of SPS itself exists; this
+    panel uses proxy personality traits.
+  - 'Trait markers: neuroticism and openness from Schwaba et al. 2026 (PMID:42686911; neuroticism N~1.1M, openness N~568K).
+    Effects are per standardized trait unit, converted to pseudo-OR = exp(beta).'
+  - Neuroticism is genetically correlated with OCD (rG 0.50), ADHD (0.31), ASD (0.25) and negatively with educational attainment
+    (-0.23); openness with educational attainment (+0.50) and ASD (+0.39) (Schwaba 2026).
+  - Several top neuroticism loci sit at circadian genes (ARNTL/BMAL1, TEF).
+  - 'Relates to Dabrowski''s overexcitabilities: emotional, sensual, intellectual, imaginational. Higher trait allele count
+    = greater depth of processing, NOT pathology.'
   snps:
   - rsid: rs25531
     gene: SLC6A4 (5-HTTLPR)
@@ -1561,6 +2690,8 @@ sps:
     description: Serotonin transporter; L-G = low-expressing allele. Low 5-HTT linked to greater environmental sensitivity
       (differential susceptibility).
     source: PMID:21928163
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Postoperative tumor imaging....)
   - rsid: rs140701
     gene: SLC6A4
     chromosome: '17'
@@ -1571,6 +2702,8 @@ sps:
     risk_allele_freq: 0.3
     description: Serotonin transporter intronic variant; STin2 region, sensory sensitivity.
     source: PMID:21928163
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Postoperative tumor imaging....)
   - rsid: rs4680
     gene: COMT
     chromosome: '22'
@@ -1582,6 +2715,8 @@ sps:
     description: Val158Met; Met allele = slower dopamine clearance, higher emotional reactivity, greater pain sensitivity,
       deeper processing of stimuli.
     source: PMID:18414213
+    unverified: true
+    unverified_reason: cited PMID is a different paper (ACMG recommendations for standards for interpretation and re...)
   - rsid: rs1800955
     gene: DRD4
     chromosome: '11'
@@ -1593,6 +2728,8 @@ sps:
     description: Dopamine receptor D4 promoter; associated with novelty seeking, emotional intensity, and sensory seeking
       behaviors.
     source: PMID:11244486
+    unverified: true
+    unverified_reason: cited PMID is a different paper (No association or linkage between polymorphisms in the genes...)
   - rsid: rs1800497
     gene: ANKK1/DRD2
     chromosome: '11'
@@ -1603,6 +2740,8 @@ sps:
     risk_allele_freq: 0.2
     description: Taq1A; A allele = lower D2 receptor density, greater emotional sensitivity and reward-seeking.
     source: PMID:20732625
+    unverified: true
+    unverified_reason: cited Neale 2010 ADHD GWAS meta-analysis found no significant loci; OR source unclear
   - rsid: rs53576
     gene: OXTR
     chromosome: '3'
@@ -1614,6 +2753,8 @@ sps:
     description: Oxytocin receptor; G allele associated with greater empathy, social sensitivity, and emotional reactivity
       to social cues.
     source: PMID:20648451
+    unverified: true
+    unverified_reason: cited PMID is a different paper ([Primary percutaneous coronary intervention with DES implant...)
   - rsid: rs2254298
     gene: OXTR
     chromosome: '3'
@@ -1624,6 +2765,8 @@ sps:
     risk_allele_freq: 0.15
     description: OXTR variant; A allele linked to greater amygdala reactivity and emotional sensitivity across cultures.
     source: PMID:20648451
+    unverified: true
+    unverified_reason: cited PMID is a different paper ([Primary percutaneous coronary intervention with DES implant...)
   - rsid: rs6265
     gene: BDNF
     chromosome: '11'
@@ -1635,6 +2778,8 @@ sps:
     description: Val66Met; Met allele = altered BDNF trafficking, greater stress reactivity, heightened amygdala response,
       deeper emotional processing.
     source: PMID:24002750
+    unverified: true
+    unverified_reason: cited PMID is a different paper (A family 3 glycosyl hydrolase of Dickeya dadantii 3937 is in...)
   - rsid: rs1360780
     gene: FKBP5
     chromosome: '6'
@@ -1646,6 +2791,8 @@ sps:
     description: FK506-binding protein 5; T allele = enhanced cortisol response, greater stress sensitivity, environmental
       sensitivity (for better and worse).
     source: PMID:19793099
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Novel role for ß-adrenergic signalling in skeletal muscle gr...)
   - rsid: rs9296158
     gene: FKBP5
     chromosome: '6'
@@ -1656,6 +2803,8 @@ sps:
     risk_allele_freq: 0.35
     description: FKBP5 intronic variant; HPA axis regulation, differential susceptibility to environmental influences.
     source: PMID:19793099
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Novel role for ß-adrenergic signalling in skeletal muscle gr...)
   - rsid: rs28365062
     gene: ADRA2B
     chromosome: '2'
@@ -1667,6 +2816,9 @@ sps:
     description: Alpha-2B adrenergic receptor deletion variant; associated with enhanced emotional memory, greater amygdala
       activation to emotional stimuli.
     source: PMID:17592477
+    unverified: true
+    unverified_reason: labelled chr2 but rsid is on chr4; cited PMID is a different paper (In vivo post-transcriptional gene
+      silencing of alpha-1 antit...)
   - rsid: rs6311
     gene: HTR2A
     chromosome: '13'
@@ -1677,6 +2829,8 @@ sps:
     risk_allele_freq: 0.46
     description: Serotonin receptor 2A; C allele associated with altered sensory gating, greater perceptual sensitivity.
     source: PMID:17266101
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Bias between MNI and Talairach coordinates analyzed using th...)
   - rsid: rs6323
     gene: MAOA
     chromosome: X
@@ -1687,6 +2841,8 @@ sps:
     risk_allele_freq: 0.4
     description: Monoamine oxidase A; affects serotonin/norepinephrine metabolism, emotional intensity, and stress reactivity.
     source: PMID:15557292
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Grafting raises the salt tolerance of tomato through limitin...)
   - rsid: rs1557341
     gene: CRHR1
     chromosome: '17'
@@ -1698,6 +2854,8 @@ sps:
     description: Corticotropin-releasing hormone receptor 1; stress reactivity as a normal personality dimension (neuroticism
       GWAS, not disorder).
     source: PMID:29942085
+    unverified: true
+    unverified_reason: labelled chr17 but rsid is on chr18
   - rsid: rs12961969
     gene: CADM2
     chromosome: '3'
@@ -1709,6 +2867,8 @@ sps:
     description: Cell adhesion molecule 2; replicated in neuroticism, risk-taking, and cognitive GWAS. Temperamental sensitivity
       marker.
     source: PMID:29942085
+    unverified: true
+    unverified_reason: labelled chr3 but rsid is on chr18; risk allele G not an allele of this SNP
   - rsid: rs2572431
     gene: LRFN5
     chromosome: '14'
@@ -1720,6 +2880,8 @@ sps:
     description: Leucine-rich repeat fibronectin domain 5; synaptic adhesion, emotional reactivity (neuroticism GWAS in healthy
       population).
     source: PMID:29942085
+    unverified: true
+    unverified_reason: labelled chr14 but rsid is on chr8
   - rsid: rs4882760
     gene: TMEM132C
     chromosome: '12'
@@ -1731,6 +2893,8 @@ sps:
     description: Transmembrane protein 132C; GWS for cognitive empathy in healthy population. Higher empathy = deeper emotional
       processing.
     source: PMID:29527006
+    unverified: true
+    unverified_reason: Warrier 2018 reports T as DECREASING empathy, and only suggestive (not GWS)
   - rsid: rs1477268
     gene: WSCD2
     chromosome: '12'
@@ -1742,6 +2906,9 @@ sps:
     description: WSC domain-containing 2; genome-wide significant for Openness to Experience. Trait of aesthetic sensitivity
       and imagination.
     source: PMID:28554085
+    unverified: true
+    unverified_reason: labelled chr12 but rsid is on chr5; risk allele A not an allele of this SNP; cited PMID is a different
+      paper (Developmental changes in the critical information used for f...)
   - rsid: rs11031731
     gene: PTPRD
     chromosome: '9'
@@ -1753,6 +2920,9 @@ sps:
     description: Protein tyrosine phosphatase receptor D; Openness to Experience GWAS hit. Sensory novelty seeking as personality
       trait.
     source: PMID:28554085
+    unverified: true
+    unverified_reason: labelled chr9 but rsid is on chr11; risk allele C not an allele of this SNP; cited PMID is a different
+      paper (Developmental changes in the critical information used for f...)
   - rsid: rs10503929
     gene: ELAVL2
     chromosome: '9'
@@ -1764,19 +2934,124 @@ sps:
     description: ELAV-like RNA binding protein 2; neuronal RNA processing, associated with environmental sensitivity (HSP)
       in non-clinical sample.
     source: PMID:33100958
+    unverified: true
+    unverified_reason: labelled chr9 but rsid is on chr8; cited PMID is a different paper (Investigation on the Alteration
+      of Brain Functional Network...); actually chr8 NRG1 missense with MAF ~0.07
+  - rsid: rs111273167
+    gene: CRHR1 (17q21.31)
+    chromosome: '17'
+    risk_allele: T
+    odds_ratio: 1.024
+    ci_lower: 1.021
+    ci_upper: 1.028
+    risk_allele_freq: 0.212
+    description: CRHR1 locus; neuroticism lead SNP (P=3.7e-45) in 1.1M-person Big Five meta-analysis. Inversion region; low
+      imputation INFO. Trait, not disorder.
+    source: PMID:42686911
+  - rsid: rs11665070
+    gene: CELF4
+    chromosome: '18'
+    risk_allele: G
+    odds_ratio: 1.021
+    ci_lower: 1.018
+    ci_upper: 1.025
+    risk_allele_freq: 0.326
+    description: CUGBP Elav-like family member 4 (neuronal RNA-binding); neuroticism lead SNP (P=4.3e-37).
+    source: PMID:42686911
+  - rsid: rs7396943
+    gene: ARNTL (BMAL1)
+    chromosome: '11'
+    risk_allele: C
+    odds_ratio: 1.019
+    ci_lower: 1.016
+    ci_upper: 1.021
+    risk_allele_freq: 0.388
+    description: Core circadian clock gene; neuroticism lead SNP (P=7.5e-40). Links emotional sensitivity with circadian biology.
+    source: PMID:42686911
+  - rsid: rs11090045
+    gene: ZC3H7B/TEF
+    chromosome: '22'
+    risk_allele: A
+    odds_ratio: 1.017
+    ci_lower: 1.014
+    ci_upper: 1.02
+    risk_allele_freq: 0.298
+    description: ZC3H7B / TEF (circadian transcription factor) locus; neuroticism lead SNP (P=6.7e-29), replicated across
+      Nagel 2018, Gupta 2024 and Schwaba 2026.
+    source: PMID:42686911
+  - rsid: rs2514218
+    gene: DRD2
+    chromosome: '11'
+    risk_allele: C
+    odds_ratio: 1.015
+    ci_lower: 1.013
+    ci_upper: 1.018
+    risk_allele_freq: 0.656
+    description: Dopamine D2 receptor locus; neuroticism lead SNP (P=9.6e-27).
+    source: PMID:42686911
+  - rsid: rs10935184
+    gene: STAG1
+    chromosome: '3'
+    risk_allele: T
+    odds_ratio: 1.014
+    ci_lower: 1.012
+    ci_upper: 1.017
+    risk_allele_freq: 0.581
+    description: Cohesin subunit SA-1 (intronic); neuroticism lead SNP (P=5.4e-25).
+    source: PMID:42686911
+  - rsid: rs7191889
+    gene: RBFOX1
+    chromosome: '16'
+    risk_allele: G
+    odds_ratio: 1.015
+    ci_lower: 1.012
+    ci_upper: 1.017
+    risk_allele_freq: 0.617
+    description: RNA-binding fox-1 homolog 1 (neuronal splicing regulator); neuroticism lead SNP (P=8.6e-25).
+    source: PMID:42686911
+  - rsid: rs12938775
+    gene: PAFAH1B1 (LIS1)
+    chromosome: '17'
+    risk_allele: G
+    odds_ratio: 1.014
+    ci_lower: 1.011
+    ci_upper: 1.017
+    risk_allele_freq: 0.493
+    description: Neuronal migration gene; neuroticism lead SNP (P=4.0e-22).
+    source: PMID:42686911
+  - rsid: rs7531118
+    gene: NEGR1
+    chromosome: '1'
+    risk_allele: C
+    odds_ratio: 1.027
+    ci_lower: 1.021
+    ci_upper: 1.032
+    risk_allele_freq: 0.548
+    description: Neuronal growth regulator 1; top Openness to Experience lead SNP (P=2.3e-23).
+    source: PMID:42686911
+  - rsid: rs4576826
+    gene: C11orf80 (11q13.2)
+    chromosome: '11'
+    risk_allele: T
+    odds_ratio: 1.021
+    ci_lower: 1.017
+    ci_upper: 1.025
+    risk_allele_freq: 0.738
+    description: 11q13.2 locus; Openness to Experience lead SNP (P=2.8e-22), replicating Gupta 2024.
+    source: PMID:42686911
 psychomotor:
   name: Psychomotor Intensity / Overexcitability
   short_name: PSYCHMTR
   prevalence: 0.15
   notes:
-  - Psychomotor overexcitability (Dabrowski) is a TRAIT, not a disorder.
-  - This panel now includes BOTH neurochemical markers AND non-pathological trait markers from personality/temperament GWAS
-    in healthy populations.
-  - 'Trait sources: Extraversion (Lo 2017, social energy), Physical Activity (Klimentidis 2018, motor drive), Sensation Seeking
-    (Sanchez-Roige 2019), Chronotype (Jones 2019, evening preference), Conscientiousness-reversed (Lo 2017, spontaneity).'
-  - 'Characterized by: surplus of energy, rapid speech, restlessness, love of movement, nervous habits, competitive drive.'
-  - 'Distinct from ADHD: psychomotor OE is about INTENSITY of output, not deficit of attention.'
-  - Common in gifted populations (~30-50% of gifted individuals score high).
+  - Psychomotor overexcitability (Dabrowski) is a TRAIT, not a disorder. No GWAS of it exists; this panel uses proxy traits.
+  - 'Trait markers: extraversion and low conscientiousness from Schwaba et al. 2026 (PMID:42686911; extraversion N=619K);
+    leisure-time physical activity from Wang et al. 2022 (PMID:36071172; N=608K); risk tolerance from Karlsson Linnér 2019
+    (PMID:30643258); chronotype from Jones 2019 (PMID:30696823).'
+  - Extraversion rG with ADHD is +0.20 and risk-taking with ADHD +0.36; chronotype shows no rG with ADHD (Schwaba 2026; Demontis
+    2023).
+  - 'Characterized by: surplus of energy, rapid speech, restlessness, love of movement, competitive drive. Distinct from ADHD:
+    about INTENSITY of output, not deficit of attention.'
   snps:
   - rsid: rs4680
     gene: COMT
@@ -1788,6 +3063,8 @@ psychomotor:
     risk_allele_freq: 0.49
     description: Val158Met; Met allele = higher prefrontal dopamine, greater cortical arousal, cognitive-motor intensity.
     source: PMID:18414213
+    unverified: true
+    unverified_reason: cited PMID is a different paper (ACMG recommendations for standards for interpretation and re...)
   - rsid: rs1800955
     gene: DRD4
     chromosome: '11'
@@ -1798,6 +3075,8 @@ psychomotor:
     risk_allele_freq: 0.4
     description: DRD4 promoter; T allele = higher transcription, novelty seeking, need for stimulation and physical activity.
     source: PMID:11244486
+    unverified: true
+    unverified_reason: cited PMID is a different paper (No association or linkage between polymorphisms in the genes...)
   - rsid: rs1800497
     gene: ANKK1/DRD2
     chromosome: '11'
@@ -1808,6 +3087,8 @@ psychomotor:
     risk_allele_freq: 0.2
     description: Taq1A; A allele = lower D2 receptor density, compensatory motor drive, greater physical restlessness.
     source: PMID:20732625
+    unverified: true
+    unverified_reason: cited Neale 2010 ADHD GWAS meta-analysis found no significant loci; OR source unclear
   - rsid: rs27072
     gene: SLC6A3 (DAT1)
     chromosome: '5'
@@ -1818,6 +3099,8 @@ psychomotor:
     risk_allele_freq: 0.29
     description: Dopamine transporter; regulates striatal dopamine, motor activation levels.
     source: PMID:20732625
+    unverified: true
+    unverified_reason: cited Neale 2010 ADHD GWAS meta-analysis found no significant loci; OR source unclear
   - rsid: rs1611115
     gene: DBH
     chromosome: '9'
@@ -1829,16 +3112,20 @@ psychomotor:
     description: Dopamine beta-hydroxylase promoter; regulates norepinephrine synthesis, autonomic arousal, physical energy
       levels.
     source: PMID:16998993
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Policy watch. Focus on the men?...)
   - rsid: rs5569
     gene: SLC6A2 (NET)
     chromosome: '16'
-    risk_allele: T
+    risk_allele: A
     odds_ratio: 1.1
     ci_lower: 1.02
     ci_upper: 1.19
     risk_allele_freq: 0.41
     description: Norepinephrine transporter; affects NE reuptake, arousal regulation, motor restlessness.
     source: PMID:18759316
+    unverified: true
+    unverified_reason: 'cited PMID is a different paper (Disease activity of rheumatoid arthritis during pregnancy: r...)'
   - rsid: rs1800544
     gene: ADRA2A
     chromosome: '10'
@@ -1849,6 +3136,8 @@ psychomotor:
     risk_allele_freq: 0.27
     description: Alpha-2A adrenergic receptor; noradrenergic arousal, attention-motor coupling.
     source: PMID:17453600
+    unverified: true
+    unverified_reason: 'cited PMID is a different paper (HIV testing and disclosure: a qualitative analysis of TB pat...)'
   - rsid: rs6265
     gene: BDNF
     chromosome: '11'
@@ -1859,10 +3148,12 @@ psychomotor:
     risk_allele_freq: 0.8
     description: Val66Met; Val allele (C) = normal BDNF secretion, better motor learning, greater motor cortex plasticity.
     source: PMID:24002750
+    unverified: true
+    unverified_reason: cited PMID is a different paper (A family 3 glycosyl hydrolase of Dickeya dadantii 3937 is in...)
   - rsid: rs1801260
     gene: CLOCK
     chromosome: '4'
-    risk_allele: C
+    risk_allele: G
     odds_ratio: 1.11
     ci_lower: 1.03
     ci_upper: 1.2
@@ -1870,6 +3161,8 @@ psychomotor:
     description: Circadian clock gene; affects sleep-wake energy cycles, evening preference (night-owl pattern common in gifted
       individuals).
     source: PMID:18449190
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Chemically ubiquitylated histone H2B stimulates hDot1L-media...)
   - rsid: rs2007044
     gene: GRIN2A
     chromosome: '16'
@@ -1880,6 +3173,8 @@ psychomotor:
     risk_allele_freq: 0.62
     description: NMDA receptor 2A subunit; glutamatergic excitatory signaling, cortical excitability and psychomotor activation.
     source: PMID:25056061
+    unverified: true
+    unverified_reason: labelled chr16 but rsid is on chr12
   - rsid: rs6565113
     gene: SNAP25
     chromosome: '20'
@@ -1890,6 +3185,9 @@ psychomotor:
     risk_allele_freq: 0.17
     description: SNAP-25; synaptic vesicle exocytosis rate, neural transmission efficiency, psychomotor speed.
     source: PMID:16505834
+    unverified: true
+    unverified_reason: labelled chr20 but rsid is on chr16; cited PMID is a different paper (Evalution of the castrated male
+      Sprague-Dawley rat as a mode...)
   - rsid: rs4565946
     gene: TPH2
     chromosome: '12'
@@ -1900,6 +3198,8 @@ psychomotor:
     risk_allele_freq: 0.43
     description: Tryptophan hydroxylase 2; brain serotonin synthesis, behavioral activation and impulsivity regulation.
     source: PMID:22180660
+    unverified: true
+    unverified_reason: cited PMID is a different paper (Cytoskeletal defects in Bmpr2-associated pulmonary arterial...)
   - rsid: rs2164273
     gene: WSCD2
     chromosome: '12'
@@ -1911,6 +3211,9 @@ psychomotor:
     description: WSC domain-containing 2; GWS for Extraversion. Social energy, enthusiasm, and positive activation (trait,
       not disorder).
     source: PMID:28554085
+    unverified: true
+    unverified_reason: labelled chr12 but rsid is on chr8; cited PMID is a different paper (Developmental changes in the critical
+      information used for f...); actually chr8 MTMR9; Lo 2017 records G as the extraversion-increasing allele
   - rsid: rs1426371
     gene: LOC101928162
     chromosome: '2'
@@ -1921,6 +3224,9 @@ psychomotor:
     risk_allele_freq: 0.45
     description: Intergenic 2q12 locus; GWS for Extraversion (Lo 2017). General energetic engagement with the world.
     source: PMID:28554085
+    unverified: true
+    unverified_reason: labelled chr2 but rsid is on chr12; cited PMID is a different paper (Developmental changes in the critical
+      information used for f...); actually chr12 WSCD2; Lo 2017 records A as extraversion-decreasing
   - rsid: rs429358
     gene: APOE
     chromosome: '19'
@@ -1928,7 +3234,7 @@ psychomotor:
     odds_ratio: 1.08
     ci_lower: 1.05
     ci_upper: 1.11
-    risk_allele_freq: 0.85
+    risk_allele_freq: 0.15
     description: Apolipoprotein E (e4 locus); GWS for accelerometer-measured physical activity intensity. Measures motor drive,
       not pathology.
     source: PMID:29899525
@@ -1942,10 +3248,12 @@ psychomotor:
     risk_allele_freq: 0.45
     description: Cell adhesion molecule 2; GWS for sensation seeking, risk-taking, and adventurousness in healthy population.
     source: PMID:30643258
+    unverified: true
+    unverified_reason: labelled chr3 but rsid is on chr18; risk allele G not an allele of this SNP
   - rsid: rs12736689
     gene: RGS16
     chromosome: '1'
-    risk_allele: G
+    risk_allele: C
     odds_ratio: 1.07
     ci_lower: 1.05
     ci_upper: 1.09
@@ -1963,3 +3271,108 @@ psychomotor:
     risk_allele_freq: 0.38
     description: Nicolin 1; GWS for low Conscientiousness / spontaneity. Reflects impulsive energy, not pathological impulsivity.
     source: PMID:28554085
+    unverified: true
+    unverified_reason: labelled chr3 but rsid is on chr10; risk allele T not an allele of this SNP; cited PMID is a different
+      paper (Developmental changes in the critical information used for f...); actually chr10 PCDH15 extraversion hit, not
+      NICN1 conscientiousness
+  - rsid: rs11607529
+    gene: ARNTL (BMAL1)
+    chromosome: '11'
+    risk_allele: T
+    odds_ratio: 1.019
+    ci_lower: 1.015
+    ci_upper: 1.022
+    risk_allele_freq: 0.532
+    description: Near core circadian clock gene BMAL1; Extraversion lead SNP (P=9.0e-24) in 619K-person meta-analysis.
+    source: PMID:42686911
+  - rsid: rs1011501
+    gene: FAM172A
+    chromosome: '5'
+    risk_allele: T
+    odds_ratio: 1.02
+    ci_lower: 1.016
+    ci_upper: 1.024
+    risk_allele_freq: 0.737
+    description: FAM172A (5q15); Extraversion lead SNP (P=2.4e-22), replicated in Gupta 2024.
+    source: PMID:42686911
+  - rsid: rs4360104
+    gene: Intergenic (6q16.1)
+    chromosome: '6'
+    risk_allele: A
+    odds_ratio: 1.017
+    ci_lower: 1.013
+    ci_upper: 1.021
+    risk_allele_freq: 0.429
+    description: Novel 6q16.1 intergenic Extraversion locus (P=2.5e-20).
+    source: PMID:42686911
+  - rsid: rs6548783
+    gene: Intergenic (3p12.2)
+    chromosome: '3'
+    risk_allele: A
+    odds_ratio: 1.016
+    ci_lower: 1.012
+    ci_upper: 1.02
+    risk_allele_freq: 0.419
+    description: 3p12.2 intergenic Extraversion locus (P=5.4e-18); replicates the Lo 2017 signal.
+    source: PMID:42686911
+  - rsid: rs6668172
+    gene: LRP8
+    chromosome: '1'
+    risk_allele: C
+    odds_ratio: 1.016
+    ci_lower: 1.012
+    ci_upper: 1.02
+    risk_allele_freq: 0.57
+    description: LDL receptor-related protein 8 (reelin receptor ApoER2); Extraversion lead SNP (P=1.8e-17).
+    source: PMID:42686911
+  - rsid: rs2573570
+    gene: SEMA6D
+    chromosome: '15'
+    risk_allele: A
+    odds_ratio: 1.018
+    ci_lower: 1.014
+    ci_upper: 1.022
+    risk_allele_freq: 0.357
+    description: Semaphorin 6D; top Conscientiousness lead SNP (P=8.2e-21); A = lower conscientiousness (spontaneity), not
+      pathological impulsivity.
+    source: PMID:42686911
+  - rsid: rs17291908
+    gene: FOXP2
+    chromosome: '7'
+    risk_allele: G
+    odds_ratio: 1.016
+    ci_lower: 1.013
+    ci_upper: 1.02
+    risk_allele_freq: 0.468
+    description: Forkhead box P2; Conscientiousness lead SNP (P=2.5e-18); G = lower conscientiousness (spontaneity).
+    source: PMID:42686911
+  - rsid: rs1691471
+    gene: CADM2
+    chromosome: '3'
+    risk_allele: T
+    odds_ratio: 1.039
+    ci_lower: 1.03
+    ci_upper: 1.047
+    risk_allele_freq: 0.376
+    description: Cell adhesion molecule 2; top locus for leisure-time moderate-to-vigorous physical activity (P=2e-19, N=608K).
+    source: PMID:36071172
+  - rsid: rs1625595
+    gene: CD248/TMEM151A
+    chromosome: '11'
+    risk_allele: C
+    odds_ratio: 1.021
+    ci_lower: 1.015
+    ci_upper: 1.027
+    risk_allele_freq: 0.525
+    description: 11q13.2 locus; genome-wide significant for leisure-time MVPA (P=2e-11).
+    source: PMID:36071172
+  - rsid: rs385301
+    gene: AKAP10/ULK2
+    chromosome: '17'
+    risk_allele: C
+    odds_ratio: 1.028
+    ci_lower: 1.018
+    ci_upper: 1.039
+    risk_allele_freq: 0.736
+    description: 17p11.2 AKAP10/ULK2 locus; genome-wide significant for leisure-time MVPA (P=2e-9).
+    source: PMID:36071172

@@ -8,29 +8,40 @@ Analyzes downloaded 23andMe raw data for genetic variants (SNPs) associated with
 
 ## Features
 
-- **10 trait/condition panels** with 182 SNPs from published GWAS
+- **10 trait/condition panels**: 117 verified SNPs from published GWAS (up to 2026), plus 166 legacy entries flagged unverified and excluded from scoring by default
 - **Quantified scoring**: per-SNP odds ratios, 95% CIs, population Z-scores and percentiles
-- **Gene-gene interaction detection**: 10 known epistatic pairs checked
+- **Gene-gene interaction detection**: 10 candidate epistatic pairs (all currently flagged unverified)
 - **34-book relevance index**: ranked reading recommendations based on your genetic profile
 - **YAML-driven data**: all panels, interactions, and books are in editable YAML files
 - Accepts both `.txt` and `.zip` 23andMe raw data files
 
 ## Panels
 
-| Panel | Key | SNPs | Sources |
+| Panel | Key | Verified SNPs (total) | Main sources |
 |-------|-----|------|---------|
-| Autism Spectrum Disorder | `asd` | 27 | Grove 2019, Matoba 2020, Wang 2009 |
-| ADHD | `adhd` | 28 | Demontis 2023, candidate genes |
-| Dyslexia | `dyslexia` | 12 | DCDC2, KIAA0319, DYX1C1 |
-| OCD | `ocd` | 17 | Burton 2021, SLC1A1, GRIN2B |
-| Tourette Syndrome | `tourette` | 8 | Yu 2019, HDC, TPH2 |
-| Bipolar Disorder | `bipolar` | 15 | Mullins 2021 (PGC3-BD) |
-| Schizophrenia | `scz` | 18 | Trubetskoy 2022 (PGC3) |
-| Cognitive Ability / Giftedness | `gifted` | 19 | Savage 2018, Hill 2019, Lam 2022 |
-| Sensory Processing Sensitivity | `sps` | 20 | Aron HSP + Nagel 2018, Warrier 2018, Lo 2017 |
-| Psychomotor Intensity | `psychomotor` | 18 | Dopamine/NE + Lo 2017, Klimentidis 2018, Jones 2019 |
+| Autism Spectrum Disorder | `asd` | 8 (30) | Grove 2019, Matoba 2020 |
+| ADHD | `adhd` | 13 (40) | Demontis 2023 |
+| Dyslexia | `dyslexia` | 11 (23) | Doust 2022 (42 loci) |
+| OCD | `ocd` | 13 (29) | Strom 2025 (PGC-OCD, 30 loci) |
+| Tourette Syndrome | `tourette` | 8 (15) | TSAICG 2026 preprint, Tsetsos 2024, Yu 2019 |
+| Bipolar Disorder | `bipolar` | 17 (29) | O'Connell 2025 (PGC BD4, 298 loci) |
+| Schizophrenia | `scz` | 14 (29) | Trubetskoy 2022 (PGC3) |
+| Cognitive Ability / Giftedness | `gifted` | 11 (30) | van den Berg 2026 (N=455k) |
+| Sensory Processing Sensitivity | `sps` | 10 (30) | Schwaba 2026 Big Five (neuroticism, openness) |
+| Psychomotor Intensity | `psychomotor` | 12 (28) | Schwaba 2026 (extraversion), Wang 2022 (physical activity), Jones 2019 |
 
 The SPS and Psychomotor panels include **non-pathological trait markers** from personality GWAS (Openness, Extraversion, Empathy, Sensation Seeking, Chronotype) — not just disorder markers.
+
+## Data Verification
+
+In October 2026 every entry was checked against PubMed (does the cited PMID match the study?), Ensembl (is the rsid on the stated chromosome, and is the risk allele a real plus-strand allele?) and the source papers' supplementary tables or the GWAS Catalog. Entries that failed are kept but marked:
+
+```yaml
+  unverified: true
+  unverified_reason: labelled chr6 but rsid is on chr15; cited PMID is a different paper (...)
+```
+
+Unverified SNPs and interactions are **excluded from scoring by default**, and listed under each panel in the report. Pass `--include-unverified` to score them anyway. Most of the classic candidate-gene SNPs (DRD4, DAT1, COMT, SLC1A1, KIAA0319, ...) are flagged: either their citations don't check out, or they never replicated in the large GWAS.
 
 ## Requirements
 
@@ -52,6 +63,9 @@ python neurodiversity_analyzer.py genome_data.zip
 # Analyze a specific condition
 python neurodiversity_analyzer.py genome_data.txt -c asd
 python neurodiversity_analyzer.py genome_data.txt -c gifted
+
+# Also score entries flagged as unverified
+python neurodiversity_analyzer.py genome_data.zip --include-unverified
 ```
 
 Available panels: `asd`, `adhd`, `dyslexia`, `ocd`, `tourette`, `bipolar`, `scz`, `gifted`, `sps`, `psychomotor`
@@ -80,8 +94,8 @@ The report includes:
 ```
 neurodiversity_analyzer.py   # Analysis engine (loads data from YAML)
 data/
-  panels.yaml                # 10 panels, 182 SNPs with OR/CI/RAF
-  interactions.yaml           # 10 gene-gene interaction effects
+  panels.yaml                # 10 panels, 283 SNPs (117 verified) with OR/CI/RAF
+  interactions.yaml           # 10 gene-gene interaction effects (unverified)
   books.yaml                  # 34 books with weighted components and cross-rG
 ```
 
@@ -98,6 +112,8 @@ All data lives in `data/*.yaml` — no Python changes needed.
 ## Methodology
 
 - **Odds ratios and 95% CIs** from published GWAS and meta-analyses
+- **Quantitative traits** (personality, intelligence, activity) use pseudo-ORs: exp(beta) per SD for personality/activity, exp(beta*pi/sqrt(3)) for intelligence
+- **Alleles are plus-strand** (GRCh37/38), matching 23andMe raw data
 - **Log-additive polygenic model**: Combined OR = Product(OR_i ^ n_risk_alleles_i)
 - **Population Z-scores**: your log-OR score vs. Hardy-Weinberg expected mean and SD
 - **Gene interactions**: epistatic effects beyond multiplicative model
@@ -106,9 +122,9 @@ All data lives in `data/*.yaml` — no Python changes needed.
 
 ## Limitations
 
-- Individual SNP effect sizes are very small (OR ~1.05–1.3)
+- Individual SNP effect sizes are very small (OR ~1.02–1.1 in modern GWAS)
 - The most impactful variants (rare CNVs, de novo mutations) are **not detectable** from consumer chips
 - Environmental, epigenetic, and developmental factors are not captured
 - SNP coverage depends on 23andMe chip version
-- Cross-panel genetic correlations are approximate estimates from published LDSC analyses
+- Cross-panel genetic correlations are LDSC estimates (Grotzinger 2026, Doust 2022, Demontis 2023, Schwaba 2026); trait panels use proxy-trait correlations
 - This tool captures a tiny fraction of total genetic variance for any condition

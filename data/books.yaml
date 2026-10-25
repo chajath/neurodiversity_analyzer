@@ -21,10 +21,10 @@ Living with Intensity:
     weight: 0.2
     dimension: Psychomotor restlessness
   cross_rg:
-    psychomotor,adhd: 0.6
+    psychomotor,adhd: 0.3
     sps,asd: 0.3
-    gifted,adhd: 0.2
-    ocd,asd: 0.15
+    gifted,adhd: -0.4
+    ocd,asd: 0.33
     asd,adhd: 0.35
 Your Rainforest Mind:
   author: Paula Prober, 2016
@@ -53,12 +53,12 @@ Your Rainforest Mind:
     weight: 0.15
     dimension: Emotional range / creative intensity
   cross_rg:
-    gifted,adhd: 0.2
+    gifted,adhd: -0.4
     sps,asd: 0.3
-    psychomotor,adhd: 0.6
+    psychomotor,adhd: 0.3
     asd,adhd: 0.35
-    asd,ocd: 0.15
-    ocd,bipolar: 0.15
+    asd,ocd: 0.33
+    ocd,bipolar: 0.33
     bipolar,adhd: 0.2
 Divergent Mind:
   author: Jenara Nerenberg, 2020
@@ -82,8 +82,8 @@ Divergent Mind:
   cross_rg:
     sps,asd: 0.3
     adhd,asd: 0.35
-    psychomotor,adhd: 0.6
-    ocd,asd: 0.15
+    psychomotor,adhd: 0.3
+    ocd,asd: 0.33
 Misdiagnosis and Dual Diagnoses of Gifted Children and Adults:
   author: Webb, Amend, et al., 2005/2016
   description: "How giftedness mimics ADHD, ASD, OCD, bipolar, and\n    mood disorders. Intensity misread as pathology."
@@ -110,11 +110,11 @@ Misdiagnosis and Dual Diagnoses of Gifted Children and Adults:
     weight: 0.5
     dimension: Sensory sensitivity
   cross_rg:
-    gifted,adhd: 0.2
+    gifted,adhd: -0.4
     adhd,asd: 0.35
-    ocd,asd: 0.15
+    ocd,asd: 0.33
     bipolar,adhd: 0.2
-    psychomotor,adhd: 0.6
+    psychomotor,adhd: 0.3
     sps,asd: 0.3
 'Quiet: The Power of Introverts':
   author: Susan Cain, 2012
@@ -131,7 +131,7 @@ Misdiagnosis and Dual Diagnoses of Gifted Children and Adults:
     dimension: Preference for solitude / routines
   cross_rg:
     sps,asd: 0.3
-    gifted,asd: 0.1
+    gifted,asd: 0.2
 Driven to Distraction:
   author: Hallowell & Ratey, 1994/2011
   description: "The definitive ADHD guide. Recognizing scattered\n    brilliance, hyperfocus, and restless creativity."
@@ -146,8 +146,8 @@ Driven to Distraction:
     weight: 0.3
     dimension: Hyperfocus / creative bursts
   cross_rg:
-    adhd,psychomotor: 0.6
-    gifted,adhd: 0.2
+    adhd,psychomotor: 0.3
+    gifted,adhd: -0.4
 Wired to Create:
   author: Kaufman & Gregoire, 2015
   description: "The neuroscience of creative minds. Openness,\n    daydreaming, sensitivity, and nonconformity."
@@ -168,9 +168,9 @@ Wired to Create:
     weight: 0.3
     dimension: Emotional amplitude
   cross_rg:
-    gifted,adhd: 0.2
-    sps,bipolar: 0.1
-    psychomotor,adhd: 0.6
+    gifted,adhd: -0.4
+    sps,bipolar: 0.2
+    psychomotor,adhd: 0.3
     bipolar,adhd: 0.2
 NeuroTribes:
   author: Steve Silberman, 2015
@@ -190,8 +190,8 @@ NeuroTribes:
     dimension: Hyperfocus episodes
   cross_rg:
     asd,adhd: 0.35
-    ocd,asd: 0.15
-    gifted,asd: 0.1
+    ocd,asd: 0.33
+    gifted,asd: 0.2
 The Gifted Adult:
   author: Mary-Elaine Jacobsen, 1999
   description: "Giftedness in adulthood: intensity, complexity,\n    and drive. 'Evolutionary intelligence' framework."
@@ -236,8 +236,8 @@ The Power of Different:
   cross_rg:
     adhd,asd: 0.35
     bipolar,adhd: 0.2
-    ocd,asd: 0.15
-    dyslexia,adhd: 0.15
+    ocd,asd: 0.33
+    dyslexia,adhd: 0.53
 
 Unmasking Autism:
   author: Devon Price, 2022
@@ -249,7 +249,7 @@ Unmasking Autism:
   - {panel: gifted, weight: 0.3, dimension: Analytical self-awareness}
   cross_rg:
     asd,sps: 0.30
-    ocd,asd: 0.15
+    ocd,asd: 0.33
 
 Scattered Minds:
   author: Gabor Mate, 1999
@@ -259,8 +259,8 @@ Scattered Minds:
   - {panel: sps, weight: 0.7, dimension: Emotional sensitivity}
   - {panel: psychomotor, weight: 0.5, dimension: Restless activation}
   cross_rg:
-    adhd,psychomotor: 0.60
-    sps,adhd: 0.15
+    adhd,psychomotor: 0.3
+    sps,adhd: 0.3
 
 ADHD 2.0:
   author: Hallowell & Ratey, 2021
@@ -271,8 +271,8 @@ ADHD 2.0:
   - {panel: gifted, weight: 0.4, dimension: Strengths-based framing}
   - {panel: sps, weight: 0.3, dimension: Rejection sensitivity}
   cross_rg:
-    adhd,psychomotor: 0.60
-    gifted,adhd: 0.20
+    adhd,psychomotor: 0.3
+    gifted,adhd: -0.4
 
 Uniquely Human:
   author: Barry Prizant, 2015
@@ -283,7 +283,7 @@ Uniquely Human:
   - {panel: ocd, weight: 0.2, dimension: Need for predictability}
   cross_rg:
     asd,sps: 0.30
-    ocd,asd: 0.15
+    ocd,asd: 0.33
 
 Touched with Fire:
   author: Kay Redfield Jamison, 1993
@@ -296,7 +296,7 @@ Touched with Fire:
   cross_rg:
     bipolar,psychomotor: 0.15
     gifted,bipolar: 0.10
-    sps,bipolar: 0.10
+    sps,bipolar: 0.2
 
 The Highly Sensitive Person:
   author: Elaine Aron, 1996
@@ -317,8 +317,8 @@ A Radical Guide for Women with ADHD:
   - {panel: psychomotor, weight: 0.4, dimension: Internal restlessness}
   - {panel: ocd, weight: 0.2, dimension: Compensatory perfectionism}
   cross_rg:
-    adhd,psychomotor: 0.60
-    sps,adhd: 0.15
+    adhd,psychomotor: 0.3
+    sps,adhd: 0.3
 
 The Power of Neurodiversity:
   author: Thomas Armstrong, 2010
@@ -332,7 +332,7 @@ The Power of Neurodiversity:
   cross_rg:
     adhd,asd: 0.35
     bipolar,adhd: 0.20
-    dyslexia,adhd: 0.15
+    dyslexia,adhd: 0.53
 
 Smart but Stuck:
   author: Thomas E. Brown, 2014
@@ -342,8 +342,8 @@ Smart but Stuck:
   - {panel: adhd, weight: 1.0, dimension: Executive function challenges}
   - {panel: psychomotor, weight: 0.4, dimension: Restless energy}
   cross_rg:
-    gifted,adhd: 0.20
-    adhd,psychomotor: 0.60
+    gifted,adhd: -0.4
+    adhd,psychomotor: 0.3
 
 Proust and the Squid:
   author: Maryanne Wolf, 2007
@@ -365,7 +365,7 @@ An Unquiet Mind:
   - {panel: psychomotor, weight: 0.3, dimension: Manic energy bursts}
   cross_rg:
     bipolar,psychomotor: 0.15
-    sps,bipolar: 0.10
+    sps,bipolar: 0.2
 
 Thinking in Pictures:
   author: Temple Grandin, 1995/2006
@@ -375,8 +375,8 @@ Thinking in Pictures:
   - {panel: gifted, weight: 0.5, dimension: Problem-solving ability}
   - {panel: ocd, weight: 0.3, dimension: Detail / pattern focus}
   cross_rg:
-    ocd,asd: 0.15
-    gifted,asd: 0.10
+    ocd,asd: 0.33
+    gifted,asd: 0.2
 
 The Drama of the Gifted Child:
   author: Alice Miller, 1979/1997
@@ -398,10 +398,10 @@ Differently Wired:
   - {panel: sps, weight: 0.5, dimension: Sensitivity}
   - {panel: psychomotor, weight: 0.4, dimension: Intensity}
   cross_rg:
-    gifted,adhd: 0.20
+    gifted,adhd: -0.4
     adhd,asd: 0.35
     sps,asd: 0.30
-    psychomotor,adhd: 0.60
+    psychomotor,adhd: 0.3
 
 Twice Exceptional:
   author: Scott Barry Kaufman (ed.), 2018
@@ -413,9 +413,9 @@ Twice Exceptional:
   - {panel: dyslexia, weight: 0.5, dimension: Dyslexia co-occurrence}
   - {panel: sps, weight: 0.4, dimension: Overexcitability / sensitivity}
   cross_rg:
-    gifted,adhd: 0.20
+    gifted,adhd: -0.4
     adhd,asd: 0.35
-    dyslexia,adhd: 0.15
+    dyslexia,adhd: 0.53
     sps,asd: 0.30
 
 Look Me in the Eye:
@@ -426,7 +426,7 @@ Look Me in the Eye:
   - {panel: gifted, weight: 0.4, dimension: Technical brilliance}
   - {panel: psychomotor, weight: 0.2, dimension: Restless tinkering}
   cross_rg:
-    gifted,asd: 0.10
+    gifted,asd: 0.2
 
 The Dyslexic Advantage:
   author: Brock & Fernette Eide, 2011
@@ -436,7 +436,7 @@ The Dyslexic Advantage:
   - {panel: gifted, weight: 0.6, dimension: Spatial / narrative talent}
   - {panel: asd, weight: 0.2, dimension: Big-picture thinking}
   cross_rg:
-    dyslexia,gifted: 0.10
+    dyslexia,gifted: -0.5
 
 Neurodiversity - The Birth of an Idea:
   author: Judy Singer, 2017
@@ -448,7 +448,7 @@ Neurodiversity - The Birth of an Idea:
   - {panel: gifted, weight: 0.3, dimension: Cognitive variation}
   cross_rg:
     asd,adhd: 0.35
-    dyslexia,adhd: 0.15
+    dyslexia,adhd: 0.53
 
 The Out-of-Sync Child:
   author: Carol Kranowitz, 1998/2005
@@ -468,7 +468,7 @@ Women with Attention Deficit Disorder:
   - {panel: sps, weight: 0.5, dimension: Emotional sensitivity}
   - {panel: ocd, weight: 0.3, dimension: Compensatory strategies}
   cross_rg:
-    sps,adhd: 0.15
+    sps,adhd: 0.3
 
 Bright Not Broken:
   author: Kennedy & Banks, 2011
@@ -480,9 +480,9 @@ Bright Not Broken:
   - {panel: tourette, weight: 0.3, dimension: Tourette}
   - {panel: ocd, weight: 0.3, dimension: OCD}
   cross_rg:
-    gifted,adhd: 0.20
+    gifted,adhd: -0.4
     adhd,asd: 0.35
-    ocd,asd: 0.15
+    ocd,asd: 0.33
 
 The Explosive Child:
   author: Ross W. Greene, 1998/2014
@@ -493,9 +493,9 @@ The Explosive Child:
   - {panel: asd, weight: 0.5, dimension: Rigidity}
   - {panel: psychomotor, weight: 0.4, dimension: Intense reactions}
   cross_rg:
-    ocd,asd: 0.15
+    ocd,asd: 0.33
     adhd,asd: 0.35
-    psychomotor,adhd: 0.60
+    psychomotor,adhd: 0.3
 
 Is It You, Me, or Adult A.D.D.?:
   author: Gina Pera, 2008
@@ -505,7 +505,7 @@ Is It You, Me, or Adult A.D.D.?:
   - {panel: psychomotor, weight: 0.4, dimension: Restless energy}
   - {panel: sps, weight: 0.3, dimension: Emotional reactivity}
   cross_rg:
-    adhd,psychomotor: 0.60
+    adhd,psychomotor: 0.3
 
 Asperger's from the Inside Out:
   author: Michael John Carley, 2008
@@ -515,4 +515,4 @@ Asperger's from the Inside Out:
   - {panel: gifted, weight: 0.3, dimension: Intellectual focus}
   - {panel: ocd, weight: 0.2, dimension: Routine needs}
   cross_rg:
-    ocd,asd: 0.15
+    ocd,asd: 0.33

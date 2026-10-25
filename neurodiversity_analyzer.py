@@ -37,7 +37,7 @@ import math
 import os
 import sys
 import zipfile
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 
 import yaml
@@ -57,6 +57,8 @@ class SNPMarker:
     risk_allele_freq: float  # Risk allele frequency in general population
     description: str
     source: str
+    unverified: bool = False  # Failed source/locus verification; excluded by default
+    unverified_reason: str = ""
 
 
 @dataclass
@@ -68,6 +70,7 @@ class ConditionPanel:
     prevalence: float  # Population prevalence (e.g. 0.01 = 1%)
     snps: list[SNPMarker]
     notes: list[str]
+    excluded: list[SNPMarker] = field(default_factory=list)  # Unverified, not scored
 
 
 # ---------------------------------------------------------------------------
@@ -94,6 +97,8 @@ def _load_panels() -> dict[str, ConditionPanel]:
                 risk_allele_freq=s["risk_allele_freq"],
                 description=s["description"],
                 source=s["source"],
+                unverified=s.get("unverified", False),
+                unverified_reason=s.get("unverified_reason", ""),
             )
             for s in pdata["snps"]
         ]
@@ -107,7 +112,7 @@ def _load_panels() -> dict[str, ConditionPanel]:
     return panels
 
 
-def _load_interactions() -> list[tuple[str, str, str, str, float, str, str]]:
+def _load_interactions() -> list[tuple[str, str, str, str, float, str, str, bool]]:
     """Load gene-gene interactions from data/interactions.yaml."""
     with open(DATA_DIR / "interactions.yaml", "r") as f:
         raw = yaml.safe_load(f)
@@ -120,6 +125,7 @@ def _load_interactions() -> list[tuple[str, str, str, str, float, str, str]]:
             i["interaction_or"],
             i["description"],
             i["source"],
+            i.get("unverified", False),
         )
         for i in raw
     ]
@@ -307,7 +313,7 @@ def compute_expected_score_stats(
 # ---------------------------------------------------------------------------
 # Known gene-gene interaction effects (epistasis)
 # When two risk genes co-occur, the combined effect may be > multiplicative.
-# Format: (rsid1, rsid2, gene1, gene2, interaction_or, description, source)
+# Format: (rsid1, rsid2, gene1, gene2, interaction_or, description, source, unverified)
 # ---------------------------------------------------------------------------
 def check_interactions(
     snp_data: dict[str, tuple[str, str, str]],
@@ -323,7 +329,7 @@ def check_interactions(
     panel_rsids = {s.rsid for s in panel_snps}
     found = []
 
-    for rsid1, rsid2, gene1, gene2, inter_or, desc, _source in GENE_INTERACTIONS:
+    for rsid1, rsid2, gene1, gene2, inter_or, desc, _source, _unv in GENE_INTERACTIONS:
         # At least one SNP should be in the panel
         if rsid1 not in panel_rsids and rsid2 not in panel_rsids:
             continue
@@ -565,6 +571,15 @@ def analyze_panel(
             print(f"      RAF:       {snp.risk_allele_freq:.0%}")
             print(f"      {snp.description}")
             print(f"      Ref: {snp.source}")
+
+    if panel.excluded:
+        print()
+        print(
+            f"  --- {len(panel.excluded)} UNVERIFIED SNPs EXCLUDED FROM SCORING "
+            "(use --include-unverified) ---"
+        )
+        for snp in panel.excluded:
+            print(f"    {snp.rsid} ({snp.gene}): {snp.unverified_reason}")
 
     # Notes
     print()
@@ -858,7 +873,18 @@ def main() -> None:
         default="all",
         help=f"Condition to analyze. Choices: {', '.join(condition_keys)}, all (default: all).",
     )
+    parser.add_argument(
+        "--include-unverified",
+        action="store_true",
+        help="Also score SNPs and interactions flagged as unverified in the data files.",
+    )
     args = parser.parse_args()
+
+    if not args.include_unverified:
+        for panel in ALL_PANELS.values():
+            panel.excluded = [s for s in panel.snps if s.unverified]
+            panel.snps = [s for s in panel.snps if not s.unverified]
+        GENE_INTERACTIONS[:] = [i for i in GENE_INTERACTIONS if not i[7]]
 
     print(f"Loading 23andMe data from: {args.datafile}")
     snp_data = parse_23andme_file(args.datafile)
@@ -905,7 +931,7 @@ def main() -> None:
     print("  GENERAL DISCLAIMER")
     print("=" * 100)
     print("""
-  1. Each SNP has a VERY SMALL individual effect size (OR ~1.05-1.3).
+  1. Each SNP has a VERY SMALL individual effect size (OR ~1.02-1.1).
      Carrying risk alleles does NOT mean you have or will develop any condition.
 
   2. The combined OR from this panel captures only a TINY fraction of total genetic
